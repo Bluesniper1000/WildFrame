@@ -1,0 +1,9 @@
+ultralytics
+nbconvert
+onnx>=1.12.0,<2.0.0
+onnxruntime
+numpy
+opencv-python
+pyyaml
+pytest
+scipy

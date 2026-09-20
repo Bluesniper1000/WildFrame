@@ -1,0 +1,20 @@
+# weights path, end2end flag, input size
+backend: onnxruntime
+weights_path: ap10k_ft/weights_quant/best_int8.onnx   # relative to repo root
+providers: ["CPUExecutionProvider"]
+
+input_size: 640                # square, matches export
+input_layout: NCHW
+normalize: div255               # pixel / 255.0, no mean/std subtraction
+
+num_keypoints: 17
+end2end: false                  # raw graph output (no NMS baked in); backend.py decodes it
+
+max_det: 10                      # multi-animal cap (Phase B); set to 1 to reproduce the Phase A single-animal baseline
+
+conf_threshold: 0.25            # UNCALIBRATED - detection confidence gate before decode keeps a candidate
+iou_threshold_nms: 0.5          # UNCALIBRATED - NMS IoU threshold (only exercised once max_det > 1)
+kpt_conf_threshold: 0.0         # UNCALIBRATED - per-keypoint visibility cutoff before a rule may use that joint
+
+track_iou_threshold: 0.3         # UNCALIBRATED - min IoU between a track's predicted box and a detection to associate them
+track_max_age: 30                # UNCALIBRATED - frames a track survives with no matching detection before it's dropped

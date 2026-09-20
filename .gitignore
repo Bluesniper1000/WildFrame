@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+*.pyc
+study/clips/
+notebooks/scratch/
+notebooks/.cache/
+data/
+*.pt
+ap10k_ft/
+playground/
+plans/
+paper/
+scripts/

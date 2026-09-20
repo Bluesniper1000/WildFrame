@@ -1,0 +1,54 @@
+# thresholds, priority order, hysteresis params
+
+priority_order: [limb_clip, lead_space, [eye_thirds, centrality], odd_count]   # highest priority first; a bracketed group is an OR - either member being satisfied clears that slot
+
+orientation:
+  frontal_yaw_max_deg: 25      # UNCALIBRATED - |yaw| below this => treated as facing-camera (frontal)
+  min_axis_conf: 0.3           # UNCALIBRATED - min mean conf of the two keypoints used to build the facing vector
+
+lead_space:
+  enabled: true
+  min_lead_fraction: 0.15      # UNCALIBRATED - min empty space (fraction of frame width) in front of the subject
+  ideal_lead_fraction: 0.30    # UNCALIBRATED - target lead space fraction, used for correction magnitude
+  hysteresis_frames: 5         # UNCALIBRATED - consecutive frames required before a state flip is accepted
+
+eye_thirds:
+  enabled: true
+  kpt_conf_threshold: 0.0      # UNCALIBRATED - below this, an eye keypoint is not considered visible
+  thirds_tolerance_frac: 0.08  # UNCALIBRATED - max normalized distance from a thirds intersection to count as "on the third"
+  hysteresis_frames: 5         # UNCALIBRATED
+
+centrality:
+  enabled: true
+  center_tolerance_frac: 0.12  # UNCALIBRATED - max normalized distance (fraction of frame diagonal) from frame center to count as "centered"
+  hysteresis_frames: 5         # UNCALIBRATED - same as eye_thirds, its OR-group partner
+
+limb_clip:
+  enabled: true
+  edge_margin_frac: 0.003125   # UNCALIBRATED - distance from frame edge (fraction of frame width/height) counted as "clipped"; equals 2px on a 640x640 frame
+  min_kpt_conf: 0.25           # UNCALIBRATED - below this, a paw keypoint isn't trusted enough to call it clipped
+  hysteresis_frames: 3         # UNCALIBRATED - limb_clip reacts faster than composition rules
+
+scene:
+  max_det: 10                  # detection cap once pose/backend.py switches to multi-animal tracking
+  min_det_conf: 0.25            # UNCALIBRATED - detections below this are dropped before scene resolution
+  min_bbox_area_frac: 0.0009765625  # UNCALIBRATED - bbox area (fraction of frame area) floor to drop tiny/spurious boxes; equals 400px^2 on a 640x640 frame
+  dominance_ratio: 2.5          # UNCALIBRATED - primary must be this many times the second-largest bbox area for DOMINANT
+  agreement_fraction: 0.75      # UNCALIBRATED - fraction of non-frontal members sharing a facing direction for GROUP_ALIGNED
+  overlap_iou_max: 0.3          # UNCALIBRATED - set from scripts/measure_overlap_keypoints.py output; above this, count is unreliable
+  conf_margin: 0.05             # UNCALIBRATED - det_conf within this of min_det_conf makes the count unreliable
+  mode_enter_frames: 5          # UNCALIBRATED - consecutive frames a mode must hold before it's reported
+
+ready:
+  enabled: true
+  severity_max: 0.3           # UNCALIBRATED - a VIOLATED rule with severity at or below this doesn't block "click now"
+  hysteresis_frames: 5        # UNCALIBRATED - consecutive agreeing frames before the ready/not-ready signal flips
+
+odd_count:
+  enabled: true
+  ceiling:
+    value: 6                    # UNCALIBRATED - counts above this are too crowded for a deliberate odd-count fix
+    source: "design choice - pending Excell p.?"
+  edge_margin_frac: 0.03125     # UNCALIBRATED - distance from frame edge (fraction of frame width/height) counted as "near the edge" for reframing candidates; equals 20px on a 640x640 frame
+  exclude_below_visible: 0.5    # UNCALIBRATED - visible-fraction cutoff: below this, prefer excluding the edge member; at/above, prefer including it
+  hysteresis_frames: 5          # UNCALIBRATED
