@@ -36,8 +36,10 @@ class OverlayView(context: Context) : View(context) {
     private val jointPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply { color = Color.YELLOW }
     private val boxPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply { style = Paint.Style.STROKE; strokeWidth = 3f * density }
     private val bannerPaint = Paint()
-    private val textPaint = TextPaint(Paint.ANTI_ALIAS_FLAG).apply { color = Color.WHITE; textSize = 18f * density }
-    private val smallPaint = TextPaint(Paint.ANTI_ALIAS_FLAG).apply { color = Color.WHITE; textSize = 13f * density }
+    // Explicit this@OverlayView: TextPaint has its own `density` field (default 1.0), which an
+    // unqualified `density` inside apply{} would silently pick up.
+    private val textPaint = TextPaint(Paint.ANTI_ALIAS_FLAG).apply { color = Color.WHITE; textSize = 18f * this@OverlayView.density }
+    private val smallPaint = TextPaint(Paint.ANTI_ALIAS_FLAG).apply { color = Color.WHITE; textSize = 13f * this@OverlayView.density }
 
     fun update(s: FrameState) {
         val now = SystemClock.elapsedRealtime()

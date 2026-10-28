@@ -39,10 +39,12 @@ class MainActivity : ComponentActivity() {
             implementationMode = PreviewView.ImplementationMode.COMPATIBLE
         }
         overlay = OverlayView(this)
-        setContentView(FrameLayout(this).apply {
-            addView(previewView, FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT))
-            addView(overlay, FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT))
-        })
+        // Not built with apply{}: inside a ViewGroup scope `overlay` would resolve to the
+        // platform's ViewGroup.getOverlay() instead of this activity's OverlayView.
+        val root = FrameLayout(this)
+        root.addView(previewView, FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT))
+        root.addView(overlay, FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT))
+        setContentView(root)
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
             startCamera()
