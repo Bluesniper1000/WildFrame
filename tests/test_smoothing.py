@@ -57,3 +57,15 @@ def test_reset_isolates_single_rule():
     assert s.update(RuleName.LEAD_SPACE, RuleState.INDETERMINATE) == RuleState.INDETERMINATE
     # EYE_THIRDS untouched by the reset of LEAD_SPACE.
     assert s.update(RuleName.EYE_THIRDS, RuleState.VIOLATED) == RuleState.VIOLATED
+
+
+def test_commit_bypasses_hysteresis_and_clears_pending():
+    s = Smoother(CONFIG)
+    for _ in range(5):
+        s.update(RuleName.LEAD_SPACE, RuleState.SATISFIED)
+    s.update(RuleName.LEAD_SPACE, RuleState.VIOLATED)  # pending 1/5
+    s.commit(RuleName.LEAD_SPACE, RuleState.INDETERMINATE)
+    assert s.update(RuleName.LEAD_SPACE, RuleState.INDETERMINATE) == RuleState.INDETERMINATE
+    outputs = [s.update(RuleName.LEAD_SPACE, RuleState.VIOLATED) for _ in range(5)]
+    assert outputs[:4] == [RuleState.INDETERMINATE] * 4  # earlier pending count was cleared
+    assert outputs[4] == RuleState.VIOLATED

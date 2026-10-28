@@ -1,0 +1,3498 @@
+{
+ "format_version": 1,
+ "name": "acquire_and_lose",
+ "description": "Empty frames, an animal for 10 frames, then empty again (NONE <-> SINGLE notices).",
+ "frame_dims": [
+  640,
+  480
+ ],
+ "rules_config": {
+  "priority_order": [
+   "limb_clip",
+   "lead_space",
+   [
+    "eye_thirds",
+    "centrality"
+   ],
+   "odd_count"
+  ],
+  "orientation": {
+   "frontal_yaw_max_deg": 25,
+   "min_axis_conf": 0.3
+  },
+  "lead_space": {
+   "enabled": true,
+   "min_lead_fraction": 0.15,
+   "ideal_lead_fraction": 0.3,
+   "hysteresis_frames": 5
+  },
+  "eye_thirds": {
+   "enabled": true,
+   "kpt_conf_threshold": 0.0,
+   "thirds_tolerance_frac": 0.08,
+   "hysteresis_frames": 5
+  },
+  "centrality": {
+   "enabled": true,
+   "center_tolerance_frac": 0.12,
+   "hysteresis_frames": 5
+  },
+  "limb_clip": {
+   "enabled": true,
+   "edge_margin_frac": 0.003125,
+   "min_kpt_conf": 0.25,
+   "hysteresis_frames": 3
+  },
+  "scene": {
+   "max_det": 10,
+   "min_det_conf": 0.25,
+   "min_bbox_area_frac": 0.0009765625,
+   "dominance_ratio": 2.5,
+   "agreement_fraction": 0.75,
+   "overlap_iou_max": 0.3,
+   "conf_margin": 0.05,
+   "mode_enter_frames": 5
+  },
+  "ready": {
+   "enabled": true,
+   "severity_max": 0.3,
+   "hysteresis_frames": 5
+  },
+  "odd_count": {
+   "enabled": true,
+   "ceiling": {
+    "value": 6,
+    "source": "design choice - pending Excell p.?"
+   },
+   "edge_margin_frac": 0.03125,
+   "exclude_below_visible": 0.5,
+   "hysteresis_frames": 5
+  }
+ },
+ "frames": [
+  {
+   "detections": [],
+   "expected": {
+    "scene": {
+     "mode": "none",
+     "mode_reason": "no members",
+     "count": 0,
+     "count_reliable": true,
+     "primary_track_id": null,
+     "union_bbox": null,
+     "agreed_yaw": null,
+     "members": []
+    },
+    "mode_notice": null,
+    "raw": {},
+    "smoothed": {},
+    "ready": null,
+    "chosen": null
+   }
+  },
+  {
+   "detections": [],
+   "expected": {
+    "scene": {
+     "mode": "none",
+     "mode_reason": "no members",
+     "count": 0,
+     "count_reliable": true,
+     "primary_track_id": null,
+     "union_bbox": null,
+     "agreed_yaw": null,
+     "members": []
+    },
+    "mode_notice": null,
+    "raw": {},
+    "smoothed": {},
+    "ready": null,
+    "chosen": null
+   }
+  },
+  {
+   "detections": [],
+   "expected": {
+    "scene": {
+     "mode": "none",
+     "mode_reason": "no members",
+     "count": 0,
+     "count_reliable": true,
+     "primary_track_id": null,
+     "union_bbox": null,
+     "agreed_yaw": null,
+     "members": []
+    },
+    "mode_notice": null,
+    "raw": {},
+    "smoothed": {},
+    "ready": null,
+    "chosen": null
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      315.0,
+      193.0,
+      475.0,
+      297.0
+     ],
+     "keypoints": [
+      [
+       340.0,
+       210.0,
+       0.8500000238418579
+      ],
+      [
+       342.0,
+       208.0,
+       0.30000001192092896
+      ],
+      [
+       330.0,
+       215.0,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       460.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       280.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       222.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       252.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       282.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       280.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       222.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       252.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       282.0,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "single",
+     "mode_reason": "1 of 1 member",
+     "count": 1,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      315.0,
+      193.0,
+      475.0,
+      297.0
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371980667114,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": "Now tracking: single (1 of 1 member).",
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "subject_center": [
+        395.0,
+        245.0
+       ],
+       "dist_frac": 0.09395810236483067
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.5633676768863896,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "up",
+       "magnitude_px": [
+        86.66665649414062,
+        -50.0
+       ]
+      },
+      "referent": "the animal",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        426.6666666666667,
+        160.0
+       ],
+       "dist_frac": 0.12506941415091116
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "lead_fraction": 0.4921875,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "single_animal",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "single_animal",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "limb_clip",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": "Can't judge limb framing (insufficient_history).",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      315.0,
+      193.0,
+      475.0,
+      297.0
+     ],
+     "keypoints": [
+      [
+       340.0,
+       210.0,
+       0.8500000238418579
+      ],
+      [
+       342.0,
+       208.0,
+       0.30000001192092896
+      ],
+      [
+       330.0,
+       215.0,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       460.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       280.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       222.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       252.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       282.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       280.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       222.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       252.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       282.0,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "single",
+     "mode_reason": "1 of 1 member",
+     "count": 1,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      315.0,
+      193.0,
+      475.0,
+      297.0
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371980667114,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "subject_center": [
+        395.0,
+        245.0
+       ],
+       "dist_frac": 0.09395810236483067
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.5633676768863896,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "up",
+       "magnitude_px": [
+        86.66665649414062,
+        -50.0
+       ]
+      },
+      "referent": "the animal",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        426.6666666666667,
+        160.0
+       ],
+       "dist_frac": 0.12506941415091116
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "lead_fraction": 0.4921875,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "single_animal",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "single_animal",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "limb_clip",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": "Can't judge limb framing (insufficient_history).",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      315.0,
+      193.0,
+      475.0,
+      297.0
+     ],
+     "keypoints": [
+      [
+       340.0,
+       210.0,
+       0.8500000238418579
+      ],
+      [
+       342.0,
+       208.0,
+       0.30000001192092896
+      ],
+      [
+       330.0,
+       215.0,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       460.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       280.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       222.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       252.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       282.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       280.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       222.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       252.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       282.0,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "single",
+     "mode_reason": "1 of 1 member",
+     "count": 1,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      315.0,
+      193.0,
+      475.0,
+      297.0
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371980667114,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "subject_center": [
+        395.0,
+        245.0
+       ],
+       "dist_frac": 0.09395810236483067
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.5633676768863896,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "up",
+       "magnitude_px": [
+        86.66665649414062,
+        -50.0
+       ]
+      },
+      "referent": "the animal",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        426.6666666666667,
+        160.0
+       ],
+       "dist_frac": 0.12506941415091116
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "lead_fraction": 0.4921875,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "single_animal",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "single_animal",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "limb_clip",
+     "state": "satisfied",
+     "reason": "ok",
+     "message": "No limbs clipped.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": "the animal",
+     "debug": {
+      "checked": [
+       [
+        0,
+        "left_front"
+       ],
+       [
+        0,
+        "right_front"
+       ],
+       [
+        0,
+        "left_back"
+       ],
+       [
+        0,
+        "right_back"
+       ]
+      ],
+      "clipped_limb": null
+     }
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      315.0,
+      193.0,
+      475.0,
+      297.0
+     ],
+     "keypoints": [
+      [
+       340.0,
+       210.0,
+       0.8500000238418579
+      ],
+      [
+       342.0,
+       208.0,
+       0.30000001192092896
+      ],
+      [
+       330.0,
+       215.0,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       460.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       280.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       222.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       252.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       282.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       280.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       222.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       252.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       282.0,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "single",
+     "mode_reason": "1 of 1 member",
+     "count": 1,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      315.0,
+      193.0,
+      475.0,
+      297.0
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371980667114,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "subject_center": [
+        395.0,
+        245.0
+       ],
+       "dist_frac": 0.09395810236483067
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.5633676768863896,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "up",
+       "magnitude_px": [
+        86.66665649414062,
+        -50.0
+       ]
+      },
+      "referent": "the animal",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        426.6666666666667,
+        160.0
+       ],
+       "dist_frac": 0.12506941415091116
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "lead_fraction": 0.4921875,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "single_animal",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "single_animal",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "limb_clip",
+     "state": "satisfied",
+     "reason": "ok",
+     "message": "No limbs clipped.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": "the animal",
+     "debug": {
+      "checked": [
+       [
+        0,
+        "left_front"
+       ],
+       [
+        0,
+        "right_front"
+       ],
+       [
+        0,
+        "left_back"
+       ],
+       [
+        0,
+        "right_back"
+       ]
+      ],
+      "clipped_limb": null
+     }
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      315.0,
+      193.0,
+      475.0,
+      297.0
+     ],
+     "keypoints": [
+      [
+       340.0,
+       210.0,
+       0.8500000238418579
+      ],
+      [
+       342.0,
+       208.0,
+       0.30000001192092896
+      ],
+      [
+       330.0,
+       215.0,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       460.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       280.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       222.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       252.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       282.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       280.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       222.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       252.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       282.0,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "single",
+     "mode_reason": "1 of 1 member",
+     "count": 1,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      315.0,
+      193.0,
+      475.0,
+      297.0
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371980667114,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "subject_center": [
+        395.0,
+        245.0
+       ],
+       "dist_frac": 0.09395810236483067
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.5633676768863896,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "up",
+       "magnitude_px": [
+        86.66665649414062,
+        -50.0
+       ]
+      },
+      "referent": "the animal",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        426.6666666666667,
+        160.0
+       ],
+       "dist_frac": 0.12506941415091116
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "lead_fraction": 0.4921875,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "single_animal",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "subject_center": [
+        395.0,
+        245.0
+       ],
+       "dist_frac": 0.09395810236483067
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.5633676768863896,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "up",
+       "magnitude_px": [
+        86.66665649414062,
+        -50.0
+       ]
+      },
+      "referent": "the animal",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        426.6666666666667,
+        160.0
+       ],
+       "dist_frac": 0.12506941415091116
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "lead_fraction": 0.4921875,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "single_animal",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      315.0,
+      193.0,
+      475.0,
+      297.0
+     ],
+     "keypoints": [
+      [
+       340.0,
+       210.0,
+       0.8500000238418579
+      ],
+      [
+       342.0,
+       208.0,
+       0.30000001192092896
+      ],
+      [
+       330.0,
+       215.0,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       460.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       280.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       222.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       252.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       282.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       280.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       222.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       252.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       282.0,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "single",
+     "mode_reason": "1 of 1 member",
+     "count": 1,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      315.0,
+      193.0,
+      475.0,
+      297.0
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371980667114,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "subject_center": [
+        395.0,
+        245.0
+       ],
+       "dist_frac": 0.09395810236483067
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.5633676768863896,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "up",
+       "magnitude_px": [
+        86.66665649414062,
+        -50.0
+       ]
+      },
+      "referent": "the animal",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        426.6666666666667,
+        160.0
+       ],
+       "dist_frac": 0.12506941415091116
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "lead_fraction": 0.4921875,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "single_animal",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "subject_center": [
+        395.0,
+        245.0
+       ],
+       "dist_frac": 0.09395810236483067
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.5633676768863896,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "up",
+       "magnitude_px": [
+        86.66665649414062,
+        -50.0
+       ]
+      },
+      "referent": "the animal",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        426.6666666666667,
+        160.0
+       ],
+       "dist_frac": 0.12506941415091116
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "lead_fraction": 0.4921875,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "single_animal",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      315.0,
+      193.0,
+      475.0,
+      297.0
+     ],
+     "keypoints": [
+      [
+       340.0,
+       210.0,
+       0.8500000238418579
+      ],
+      [
+       342.0,
+       208.0,
+       0.30000001192092896
+      ],
+      [
+       330.0,
+       215.0,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       460.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       280.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       222.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       252.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       282.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       280.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       222.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       252.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       282.0,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "single",
+     "mode_reason": "1 of 1 member",
+     "count": 1,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      315.0,
+      193.0,
+      475.0,
+      297.0
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371980667114,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "subject_center": [
+        395.0,
+        245.0
+       ],
+       "dist_frac": 0.09395810236483067
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.5633676768863896,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "up",
+       "magnitude_px": [
+        86.66665649414062,
+        -50.0
+       ]
+      },
+      "referent": "the animal",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        426.6666666666667,
+        160.0
+       ],
+       "dist_frac": 0.12506941415091116
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "lead_fraction": 0.4921875,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "single_animal",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "subject_center": [
+        395.0,
+        245.0
+       ],
+       "dist_frac": 0.09395810236483067
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.5633676768863896,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "up",
+       "magnitude_px": [
+        86.66665649414062,
+        -50.0
+       ]
+      },
+      "referent": "the animal",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        426.6666666666667,
+        160.0
+       ],
+       "dist_frac": 0.12506941415091116
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "lead_fraction": 0.4921875,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "single_animal",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      315.0,
+      193.0,
+      475.0,
+      297.0
+     ],
+     "keypoints": [
+      [
+       340.0,
+       210.0,
+       0.8500000238418579
+      ],
+      [
+       342.0,
+       208.0,
+       0.30000001192092896
+      ],
+      [
+       330.0,
+       215.0,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       460.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       280.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       222.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       252.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       282.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       280.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       222.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       252.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       282.0,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "single",
+     "mode_reason": "1 of 1 member",
+     "count": 1,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      315.0,
+      193.0,
+      475.0,
+      297.0
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371980667114,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "subject_center": [
+        395.0,
+        245.0
+       ],
+       "dist_frac": 0.09395810236483067
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.5633676768863896,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "up",
+       "magnitude_px": [
+        86.66665649414062,
+        -50.0
+       ]
+      },
+      "referent": "the animal",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        426.6666666666667,
+        160.0
+       ],
+       "dist_frac": 0.12506941415091116
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "lead_fraction": 0.4921875,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "single_animal",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "subject_center": [
+        395.0,
+        245.0
+       ],
+       "dist_frac": 0.09395810236483067
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.5633676768863896,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "up",
+       "magnitude_px": [
+        86.66665649414062,
+        -50.0
+       ]
+      },
+      "referent": "the animal",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        426.6666666666667,
+        160.0
+       ],
+       "dist_frac": 0.12506941415091116
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "lead_fraction": 0.4921875,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "single_animal",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      315.0,
+      193.0,
+      475.0,
+      297.0
+     ],
+     "keypoints": [
+      [
+       340.0,
+       210.0,
+       0.8500000238418579
+      ],
+      [
+       342.0,
+       208.0,
+       0.30000001192092896
+      ],
+      [
+       330.0,
+       215.0,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       460.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       280.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       222.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       252.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       282.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       280.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       222.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       252.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       282.0,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "single",
+     "mode_reason": "1 of 1 member",
+     "count": 1,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      315.0,
+      193.0,
+      475.0,
+      297.0
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371980667114,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "subject_center": [
+        395.0,
+        245.0
+       ],
+       "dist_frac": 0.09395810236483067
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.5633676768863896,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "up",
+       "magnitude_px": [
+        86.66665649414062,
+        -50.0
+       ]
+      },
+      "referent": "the animal",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        426.6666666666667,
+        160.0
+       ],
+       "dist_frac": 0.12506941415091116
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "lead_fraction": 0.4921875,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "single_animal",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "subject_center": [
+        395.0,
+        245.0
+       ],
+       "dist_frac": 0.09395810236483067
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.5633676768863896,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "up",
+       "magnitude_px": [
+        86.66665649414062,
+        -50.0
+       ]
+      },
+      "referent": "the animal",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        426.6666666666667,
+        160.0
+       ],
+       "dist_frac": 0.12506941415091116
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "lead_fraction": 0.4921875,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "single_animal",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      315.0,
+      193.0,
+      475.0,
+      297.0
+     ],
+     "keypoints": [
+      [
+       340.0,
+       210.0,
+       0.8500000238418579
+      ],
+      [
+       342.0,
+       208.0,
+       0.30000001192092896
+      ],
+      [
+       330.0,
+       215.0,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       460.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       360.0,
+       280.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       222.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       252.0,
+       0.8999999761581421
+      ],
+      [
+       365.0,
+       282.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       220.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       430.0,
+       280.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       222.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       252.0,
+       0.8999999761581421
+      ],
+      [
+       435.0,
+       282.0,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "single",
+     "mode_reason": "1 of 1 member",
+     "count": 1,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      315.0,
+      193.0,
+      475.0,
+      297.0
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371980667114,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "subject_center": [
+        395.0,
+        245.0
+       ],
+       "dist_frac": 0.09395810236483067
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.5633676768863896,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "up",
+       "magnitude_px": [
+        86.66665649414062,
+        -50.0
+       ]
+      },
+      "referent": "the animal",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        426.6666666666667,
+        160.0
+       ],
+       "dist_frac": 0.12506941415091116
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "lead_fraction": 0.4921875,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "single_animal",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "subject_center": [
+        395.0,
+        245.0
+       ],
+       "dist_frac": 0.09395810236483067
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.5633676768863896,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "up",
+       "magnitude_px": [
+        86.66665649414062,
+        -50.0
+       ]
+      },
+      "referent": "the animal",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        426.6666666666667,
+        160.0
+       ],
+       "dist_frac": 0.12506941415091116
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "lead_fraction": 0.4921875,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "single_animal",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the animal",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [],
+   "expected": {
+    "scene": {
+     "mode": "single",
+     "mode_reason": "no members",
+     "count": 0,
+     "count_reliable": true,
+     "primary_track_id": null,
+     "union_bbox": null,
+     "agreed_yaw": null,
+     "members": []
+    },
+    "mode_notice": null,
+    "raw": {},
+    "smoothed": {},
+    "ready": null,
+    "chosen": null
+   }
+  },
+  {
+   "detections": [],
+   "expected": {
+    "scene": {
+     "mode": "single",
+     "mode_reason": "no members",
+     "count": 0,
+     "count_reliable": true,
+     "primary_track_id": null,
+     "union_bbox": null,
+     "agreed_yaw": null,
+     "members": []
+    },
+    "mode_notice": null,
+    "raw": {},
+    "smoothed": {},
+    "ready": null,
+    "chosen": null
+   }
+  },
+  {
+   "detections": [],
+   "expected": {
+    "scene": {
+     "mode": "single",
+     "mode_reason": "no members",
+     "count": 0,
+     "count_reliable": true,
+     "primary_track_id": null,
+     "union_bbox": null,
+     "agreed_yaw": null,
+     "members": []
+    },
+    "mode_notice": null,
+    "raw": {},
+    "smoothed": {},
+    "ready": null,
+    "chosen": null
+   }
+  }
+ ]
+}

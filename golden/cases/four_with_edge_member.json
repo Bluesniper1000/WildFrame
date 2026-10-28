@@ -1,0 +1,10826 @@
+{
+ "format_version": 1,
+ "name": "four_with_edge_member",
+ "description": "Four animals, one half out of frame at the left edge -> odd_count reframing.",
+ "frame_dims": [
+  640,
+  480
+ ],
+ "rules_config": {
+  "priority_order": [
+   "limb_clip",
+   "lead_space",
+   [
+    "eye_thirds",
+    "centrality"
+   ],
+   "odd_count"
+  ],
+  "orientation": {
+   "frontal_yaw_max_deg": 25,
+   "min_axis_conf": 0.3
+  },
+  "lead_space": {
+   "enabled": true,
+   "min_lead_fraction": 0.15,
+   "ideal_lead_fraction": 0.3,
+   "hysteresis_frames": 5
+  },
+  "eye_thirds": {
+   "enabled": true,
+   "kpt_conf_threshold": 0.0,
+   "thirds_tolerance_frac": 0.08,
+   "hysteresis_frames": 5
+  },
+  "centrality": {
+   "enabled": true,
+   "center_tolerance_frac": 0.12,
+   "hysteresis_frames": 5
+  },
+  "limb_clip": {
+   "enabled": true,
+   "edge_margin_frac": 0.003125,
+   "min_kpt_conf": 0.25,
+   "hysteresis_frames": 3
+  },
+  "scene": {
+   "max_det": 10,
+   "min_det_conf": 0.25,
+   "min_bbox_area_frac": 0.0009765625,
+   "dominance_ratio": 2.5,
+   "agreement_fraction": 0.75,
+   "overlap_iou_max": 0.3,
+   "conf_margin": 0.05,
+   "mode_enter_frames": 5
+  },
+  "ready": {
+   "enabled": true,
+   "severity_max": 0.3,
+   "hysteresis_frames": 5
+  },
+  "odd_count": {
+   "enabled": true,
+   "ceiling": {
+    "value": 6,
+    "source": "design choice - pending Excell p.?"
+   },
+   "edge_margin_frac": 0.03125,
+   "exclude_below_visible": 0.5,
+   "hysteresis_frames": 5
+  }
+ },
+ "frames": [
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      -22.5,
+      229.60000610351562,
+      66.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       -3.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       -2.0999999046325684,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       -7.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       15.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       51.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      182.5,
+      229.60000610351562,
+      271.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       202.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       202.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       197.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       220.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       256.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      342.5,
+      229.60000610351562,
+      431.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       362.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       362.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       357.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       416.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    },
+    {
+     "bbox_xyxy": [
+      502.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       522.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       522.9000244140625,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       517.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       540.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       576.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 4
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "4 of 4 facing left",
+     "count": 4,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      -22.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 4,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": "Now tracking: group aligned (4 of 4 facing left).",
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "limb_clip",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": "Can't judge limb framing (insufficient_history).",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      -22.5,
+      229.60000610351562,
+      66.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       -3.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       -2.0999999046325684,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       -7.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       15.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       51.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      182.5,
+      229.60000610351562,
+      271.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       202.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       202.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       197.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       220.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       256.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      342.5,
+      229.60000610351562,
+      431.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       362.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       362.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       357.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       416.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    },
+    {
+     "bbox_xyxy": [
+      502.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       522.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       522.9000244140625,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       517.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       540.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       576.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 4
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "4 of 4 facing left",
+     "count": 4,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      -22.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 4,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "limb_clip",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": "Can't judge limb framing (insufficient_history).",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      -22.5,
+      229.60000610351562,
+      66.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       -3.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       -2.0999999046325684,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       -7.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       15.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       51.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      182.5,
+      229.60000610351562,
+      271.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       202.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       202.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       197.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       220.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       256.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      342.5,
+      229.60000610351562,
+      431.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       362.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       362.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       357.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       416.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    },
+    {
+     "bbox_xyxy": [
+      502.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       522.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       522.9000244140625,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       517.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       540.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       576.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 4
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "4 of 4 facing left",
+     "count": 4,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      -22.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 4,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "limb_clip",
+     "state": "satisfied",
+     "reason": "ok",
+     "message": "No limbs clipped.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": "the group",
+     "debug": {
+      "checked": [
+       [
+        0,
+        "left_front"
+       ],
+       [
+        0,
+        "right_front"
+       ],
+       [
+        0,
+        "left_back"
+       ],
+       [
+        0,
+        "right_back"
+       ],
+       [
+        1,
+        "left_front"
+       ],
+       [
+        1,
+        "right_front"
+       ],
+       [
+        1,
+        "left_back"
+       ],
+       [
+        1,
+        "right_back"
+       ],
+       [
+        2,
+        "left_front"
+       ],
+       [
+        2,
+        "right_front"
+       ],
+       [
+        2,
+        "left_back"
+       ],
+       [
+        2,
+        "right_back"
+       ],
+       [
+        3,
+        "left_front"
+       ],
+       [
+        3,
+        "right_front"
+       ],
+       [
+        3,
+        "left_back"
+       ],
+       [
+        3,
+        "right_back"
+       ]
+      ],
+      "clipped_limb": null
+     }
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      -22.5,
+      229.60000610351562,
+      66.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       -3.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       -2.0999999046325684,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       -7.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       15.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       51.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      182.5,
+      229.60000610351562,
+      271.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       202.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       202.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       197.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       220.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       256.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      342.5,
+      229.60000610351562,
+      431.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       362.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       362.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       357.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       416.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    },
+    {
+     "bbox_xyxy": [
+      502.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       522.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       522.9000244140625,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       517.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       540.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       576.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 4
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "4 of 4 facing left",
+     "count": 4,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      -22.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 4,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "limb_clip",
+     "state": "satisfied",
+     "reason": "ok",
+     "message": "No limbs clipped.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": "the group",
+     "debug": {
+      "checked": [
+       [
+        0,
+        "left_front"
+       ],
+       [
+        0,
+        "right_front"
+       ],
+       [
+        0,
+        "left_back"
+       ],
+       [
+        0,
+        "right_back"
+       ],
+       [
+        1,
+        "left_front"
+       ],
+       [
+        1,
+        "right_front"
+       ],
+       [
+        1,
+        "left_back"
+       ],
+       [
+        1,
+        "right_back"
+       ],
+       [
+        2,
+        "left_front"
+       ],
+       [
+        2,
+        "right_front"
+       ],
+       [
+        2,
+        "left_back"
+       ],
+       [
+        2,
+        "right_back"
+       ],
+       [
+        3,
+        "left_front"
+       ],
+       [
+        3,
+        "right_front"
+       ],
+       [
+        3,
+        "left_back"
+       ],
+       [
+        3,
+        "right_back"
+       ]
+      ],
+      "clipped_limb": null
+     }
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      -22.5,
+      229.60000610351562,
+      66.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       -3.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       -2.0999999046325684,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       -7.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       15.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       51.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      182.5,
+      229.60000610351562,
+      271.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       202.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       202.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       197.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       220.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       256.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      342.5,
+      229.60000610351562,
+      431.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       362.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       362.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       357.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       416.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    },
+    {
+     "bbox_xyxy": [
+      502.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       522.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       522.9000244140625,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       517.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       540.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       576.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 4
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "4 of 4 facing left",
+     "count": 4,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      -22.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 4,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "violated",
+     "reason": "has_blocking_violation",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "lead_space",
+     "state": "violated",
+     "reason": "insufficient_lead_space",
+     "message": "Pan right - give the animal more room to look/move into.",
+     "severity": 1.0,
+     "correction": {
+      "axis": "pan",
+      "direction": "right",
+      "magnitude_frac": 0.33515626192092896
+     },
+     "referent": "the group",
+     "debug": {
+      "lead_fraction": -0.03515625,
+      "front_side": "left"
+     }
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      -22.5,
+      229.60000610351562,
+      66.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       -3.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       -2.0999999046325684,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       -7.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       15.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       51.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      182.5,
+      229.60000610351562,
+      271.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       202.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       202.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       197.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       220.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       256.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      342.5,
+      229.60000610351562,
+      431.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       362.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       362.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       357.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       416.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    },
+    {
+     "bbox_xyxy": [
+      502.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       522.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       522.9000244140625,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       517.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       540.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       576.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 4
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "4 of 4 facing left",
+     "count": 4,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      -22.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 4,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "violated",
+     "reason": "has_blocking_violation",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "lead_space",
+     "state": "violated",
+     "reason": "insufficient_lead_space",
+     "message": "Pan right - give the animal more room to look/move into.",
+     "severity": 1.0,
+     "correction": {
+      "axis": "pan",
+      "direction": "right",
+      "magnitude_frac": 0.33515626192092896
+     },
+     "referent": "the group",
+     "debug": {
+      "lead_fraction": -0.03515625,
+      "front_side": "left"
+     }
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      -22.5,
+      229.60000610351562,
+      66.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       -3.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       -2.0999999046325684,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       -7.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       15.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       51.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      182.5,
+      229.60000610351562,
+      271.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       202.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       202.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       197.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       220.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       256.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      342.5,
+      229.60000610351562,
+      431.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       362.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       362.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       357.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       416.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    },
+    {
+     "bbox_xyxy": [
+      502.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       522.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       522.9000244140625,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       517.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       540.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       576.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 4
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "4 of 4 facing left",
+     "count": 4,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      -22.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 4,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "violated",
+     "reason": "has_blocking_violation",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "lead_space",
+     "state": "violated",
+     "reason": "insufficient_lead_space",
+     "message": "Pan right - give the animal more room to look/move into.",
+     "severity": 1.0,
+     "correction": {
+      "axis": "pan",
+      "direction": "right",
+      "magnitude_frac": 0.33515626192092896
+     },
+     "referent": "the group",
+     "debug": {
+      "lead_fraction": -0.03515625,
+      "front_side": "left"
+     }
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      -22.5,
+      229.60000610351562,
+      66.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       -3.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       -2.0999999046325684,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       -7.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       15.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       51.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      182.5,
+      229.60000610351562,
+      271.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       202.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       202.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       197.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       220.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       256.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      342.5,
+      229.60000610351562,
+      431.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       362.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       362.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       357.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       416.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    },
+    {
+     "bbox_xyxy": [
+      502.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       522.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       522.9000244140625,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       517.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       540.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       576.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 4
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "4 of 4 facing left",
+     "count": 4,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      -22.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 4,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "violated",
+     "reason": "has_blocking_violation",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "lead_space",
+     "state": "violated",
+     "reason": "insufficient_lead_space",
+     "message": "Pan right - give the animal more room to look/move into.",
+     "severity": 1.0,
+     "correction": {
+      "axis": "pan",
+      "direction": "right",
+      "magnitude_frac": 0.33515626192092896
+     },
+     "referent": "the group",
+     "debug": {
+      "lead_fraction": -0.03515625,
+      "front_side": "left"
+     }
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      -22.5,
+      229.60000610351562,
+      66.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       -3.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       -2.0999999046325684,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       -7.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       15.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       51.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      182.5,
+      229.60000610351562,
+      271.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       202.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       202.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       197.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       220.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       256.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      342.5,
+      229.60000610351562,
+      431.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       362.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       362.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       357.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       416.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    },
+    {
+     "bbox_xyxy": [
+      502.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       522.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       522.9000244140625,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       517.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       540.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       576.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 4
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "4 of 4 facing left",
+     "count": 4,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      -22.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 4,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "violated",
+     "reason": "has_blocking_violation",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "lead_space",
+     "state": "violated",
+     "reason": "insufficient_lead_space",
+     "message": "Pan right - give the animal more room to look/move into.",
+     "severity": 1.0,
+     "correction": {
+      "axis": "pan",
+      "direction": "right",
+      "magnitude_frac": 0.33515626192092896
+     },
+     "referent": "the group",
+     "debug": {
+      "lead_fraction": -0.03515625,
+      "front_side": "left"
+     }
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      -22.5,
+      229.60000610351562,
+      66.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       -3.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       -2.0999999046325684,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       -7.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       15.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       51.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      182.5,
+      229.60000610351562,
+      271.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       202.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       202.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       197.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       220.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       256.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      342.5,
+      229.60000610351562,
+      431.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       362.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       362.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       357.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       416.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    },
+    {
+     "bbox_xyxy": [
+      502.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       522.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       522.9000244140625,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       517.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       540.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       576.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 4
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "4 of 4 facing left",
+     "count": 4,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      -22.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 4,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "violated",
+     "reason": "has_blocking_violation",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "lead_space",
+     "state": "violated",
+     "reason": "insufficient_lead_space",
+     "message": "Pan right - give the animal more room to look/move into.",
+     "severity": 1.0,
+     "correction": {
+      "axis": "pan",
+      "direction": "right",
+      "magnitude_frac": 0.33515626192092896
+     },
+     "referent": "the group",
+     "debug": {
+      "lead_fraction": -0.03515625,
+      "front_side": "left"
+     }
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      -22.5,
+      229.60000610351562,
+      66.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       -3.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       -2.0999999046325684,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       -7.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       15.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       51.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      182.5,
+      229.60000610351562,
+      271.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       202.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       202.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       197.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       220.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       256.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      342.5,
+      229.60000610351562,
+      431.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       362.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       362.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       357.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       416.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    },
+    {
+     "bbox_xyxy": [
+      502.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       522.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       522.9000244140625,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       517.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       540.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       576.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 4
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "4 of 4 facing left",
+     "count": 4,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      -22.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 4,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "violated",
+     "reason": "has_blocking_violation",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "lead_space",
+     "state": "violated",
+     "reason": "insufficient_lead_space",
+     "message": "Pan right - give the animal more room to look/move into.",
+     "severity": 1.0,
+     "correction": {
+      "axis": "pan",
+      "direction": "right",
+      "magnitude_frac": 0.33515626192092896
+     },
+     "referent": "the group",
+     "debug": {
+      "lead_fraction": -0.03515625,
+      "front_side": "left"
+     }
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      -22.5,
+      229.60000610351562,
+      66.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       -3.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       -2.0999999046325684,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       -7.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       15.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       51.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      182.5,
+      229.60000610351562,
+      271.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       202.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       202.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       197.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       220.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       256.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      342.5,
+      229.60000610351562,
+      431.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       362.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       362.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       357.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       416.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    },
+    {
+     "bbox_xyxy": [
+      502.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       522.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       522.9000244140625,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       517.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       540.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       576.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 4
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "4 of 4 facing left",
+     "count": 4,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      -22.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 4,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "violated",
+     "reason": "has_blocking_violation",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "lead_space",
+     "state": "violated",
+     "reason": "insufficient_lead_space",
+     "message": "Pan right - give the animal more room to look/move into.",
+     "severity": 1.0,
+     "correction": {
+      "axis": "pan",
+      "direction": "right",
+      "magnitude_frac": 0.33515626192092896
+     },
+     "referent": "the group",
+     "debug": {
+      "lead_fraction": -0.03515625,
+      "front_side": "left"
+     }
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      -22.5,
+      229.60000610351562,
+      66.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       -3.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       -2.0999999046325684,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       -7.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       15.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       51.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      182.5,
+      229.60000610351562,
+      271.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       202.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       202.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       197.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       220.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       256.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      342.5,
+      229.60000610351562,
+      431.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       362.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       362.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       357.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       416.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    },
+    {
+     "bbox_xyxy": [
+      502.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       522.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       522.9000244140625,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       517.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       540.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       576.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 4
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "4 of 4 facing left",
+     "count": 4,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      -22.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 4,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "violated",
+     "reason": "has_blocking_violation",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "lead_space",
+     "state": "violated",
+     "reason": "insufficient_lead_space",
+     "message": "Pan right - give the animal more room to look/move into.",
+     "severity": 1.0,
+     "correction": {
+      "axis": "pan",
+      "direction": "right",
+      "magnitude_frac": 0.33515626192092896
+     },
+     "referent": "the group",
+     "debug": {
+      "lead_fraction": -0.03515625,
+      "front_side": "left"
+     }
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      -22.5,
+      229.60000610351562,
+      66.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       -3.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       -2.0999999046325684,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       -7.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       15.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       51.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       6.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       8.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       37.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       39.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      182.5,
+      229.60000610351562,
+      271.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       202.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       202.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       197.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       220.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       256.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       211.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       213.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       242.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       244.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      342.5,
+      229.60000610351562,
+      431.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       362.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       362.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       357.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       380.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       416.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       371.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       373.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       402.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       404.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    },
+    {
+     "bbox_xyxy": [
+      502.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       522.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       522.9000244140625,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       517.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       540.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       576.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       531.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       533.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       562.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       564.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 4
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "4 of 4 facing left",
+     "count": 4,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      -22.5,
+      229.60000610351562,
+      591.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 4,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        284.25,
+        261.25
+       ],
+       "dist_frac": 0.05198595062610667
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        216.3333282470703,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.2860025101246236
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "violated",
+      "reason": "insufficient_lead_space",
+      "message": null,
+      "severity": 1.0,
+      "correction": {
+       "axis": "pan",
+       "direction": "right",
+       "magnitude_frac": 0.33515626192092896
+      },
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": -0.03515625,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ],
+        [
+         3,
+         "left_front"
+        ],
+        [
+         3,
+         "right_front"
+        ],
+        [
+         3,
+         "left_back"
+        ],
+        [
+         3,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "shift_does_not_fix_parity",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 4,
+       "target_member_index": 0,
+       "target_track_id": 1,
+       "visible_fraction": 0.7457627654075623,
+       "edge": "left"
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "violated",
+     "reason": "has_blocking_violation",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "lead_space",
+     "state": "violated",
+     "reason": "insufficient_lead_space",
+     "message": "Pan right - give the animal more room to look/move into.",
+     "severity": 1.0,
+     "correction": {
+      "axis": "pan",
+      "direction": "right",
+      "magnitude_frac": 0.33515626192092896
+     },
+     "referent": "the group",
+     "debug": {
+      "lead_fraction": -0.03515625,
+      "front_side": "left"
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,143 @@
+{
+ "format_version": 1,
+ "name": "new_arrival",
+ "description": "A second box appears mid-sequence and gets the next id.",
+ "tracker_config": {
+  "track_iou_threshold": 0.3,
+  "track_max_age": 30
+ },
+ "frames": [
+  {
+   "boxes_xyxy": [
+    [
+     90.0,
+     155.0,
+     210.0,
+     245.0
+    ]
+   ],
+   "expected_track_ids": [
+    1
+   ]
+  },
+  {
+   "boxes_xyxy": [
+    [
+     90.0,
+     155.0,
+     210.0,
+     245.0
+    ]
+   ],
+   "expected_track_ids": [
+    1
+   ]
+  },
+  {
+   "boxes_xyxy": [
+    [
+     90.0,
+     155.0,
+     210.0,
+     245.0
+    ]
+   ],
+   "expected_track_ids": [
+    1
+   ]
+  },
+  {
+   "boxes_xyxy": [
+    [
+     90.0,
+     155.0,
+     210.0,
+     245.0
+    ]
+   ],
+   "expected_track_ids": [
+    1
+   ]
+  },
+  {
+   "boxes_xyxy": [
+    [
+     90.0,
+     155.0,
+     210.0,
+     245.0
+    ],
+    [
+     420.0,
+     255.0,
+     540.0,
+     345.0
+    ]
+   ],
+   "expected_track_ids": [
+    1,
+    2
+   ]
+  },
+  {
+   "boxes_xyxy": [
+    [
+     90.0,
+     155.0,
+     210.0,
+     245.0
+    ],
+    [
+     420.0,
+     255.0,
+     540.0,
+     345.0
+    ]
+   ],
+   "expected_track_ids": [
+    1,
+    2
+   ]
+  },
+  {
+   "boxes_xyxy": [
+    [
+     90.0,
+     155.0,
+     210.0,
+     245.0
+    ],
+    [
+     420.0,
+     255.0,
+     540.0,
+     345.0
+    ]
+   ],
+   "expected_track_ids": [
+    1,
+    2
+   ]
+  },
+  {
+   "boxes_xyxy": [
+    [
+     90.0,
+     155.0,
+     210.0,
+     245.0
+    ],
+    [
+     420.0,
+     255.0,
+     540.0,
+     345.0
+    ]
+   ],
+   "expected_track_ids": [
+    1,
+    2
+   ]
+  }
+ ]
+}
