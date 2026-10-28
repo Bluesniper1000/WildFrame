@@ -1,0 +1,63 @@
+{
+ "priority_order": [
+  "limb_clip",
+  "lead_space",
+  [
+   "eye_thirds",
+   "centrality"
+  ],
+  "odd_count"
+ ],
+ "orientation": {
+  "frontal_yaw_max_deg": 25,
+  "min_axis_conf": 0.3
+ },
+ "lead_space": {
+  "enabled": true,
+  "min_lead_fraction": 0.15,
+  "ideal_lead_fraction": 0.3,
+  "hysteresis_frames": 5
+ },
+ "eye_thirds": {
+  "enabled": true,
+  "kpt_conf_threshold": 0.0,
+  "thirds_tolerance_frac": 0.08,
+  "hysteresis_frames": 5
+ },
+ "centrality": {
+  "enabled": true,
+  "center_tolerance_frac": 0.12,
+  "hysteresis_frames": 5
+ },
+ "limb_clip": {
+  "enabled": true,
+  "edge_margin_frac": 0.003125,
+  "min_kpt_conf": 0.25,
+  "hysteresis_frames": 3
+ },
+ "scene": {
+  "max_det": 10,
+  "min_det_conf": 0.25,
+  "min_bbox_area_frac": 0.0009765625,
+  "dominance_ratio": 2.5,
+  "agreement_fraction": 0.75,
+  "overlap_iou_max": 0.3,
+  "conf_margin": 0.05,
+  "mode_enter_frames": 5
+ },
+ "ready": {
+  "enabled": true,
+  "severity_max": 0.3,
+  "hysteresis_frames": 5
+ },
+ "odd_count": {
+  "enabled": true,
+  "ceiling": {
+   "value": 6,
+   "source": "design choice - pending Excell p.?"
+  },
+  "edge_margin_frac": 0.03125,
+  "exclude_below_visible": 0.5,
+  "hysteresis_frames": 5
+ }
+}

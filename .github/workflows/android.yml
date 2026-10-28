@@ -1,0 +1,66 @@
+name: Android
+
+# Builds the WildFrame Android app in the cloud (no local Android SDK needed):
+#   1. Python: the golden fixtures and the app's config assets still match the Python pipeline.
+#   2. Kotlin: the ported rule engine reproduces every golden fixture.
+#   3. A debug APK, uploaded as the "wildframe-debug-apk" artifact of the run.
+on:
+  push:
+    paths:
+      - "android/**"
+      - "golden/**"
+      - "wildframe/**"
+      - "configs/**"
+      - "tests/test_golden.py"
+      - ".github/workflows/android.yml"
+  pull_request:
+    paths:
+      - "android/**"
+      - "golden/**"
+      - "wildframe/**"
+      - "configs/**"
+  workflow_dispatch:
+
+jobs:
+  python-golden:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install minimal deps
+        run: pip install numpy scipy pyyaml pytest opencv-python-headless onnxruntime
+      - name: Golden parity (Python side)
+        run: python -m pytest -q tests/test_golden.py
+
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: "8.9"
+      - name: Engine tests (golden parity, Kotlin side)
+        working-directory: android
+        run: gradle --no-daemon --stacktrace :engine:test
+      - name: Build debug APK
+        working-directory: android
+        run: gradle --no-daemon --stacktrace :app:assembleDebug
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: wildframe-debug-apk
+          path: android/app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
+      - name: Upload test reports
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: engine-test-reports
+          path: android/engine/build/reports/tests/
+          if-no-files-found: ignore

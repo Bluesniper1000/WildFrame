@@ -30,6 +30,8 @@ from wildframe.tracking import ByteTracker
 
 GOLDEN_DIR = Path(__file__).resolve().parent
 FORMAT_VERSION = 1
+# The Android app ships JSON copies of configs/*.yaml; regenerated here with the fixtures.
+ANDROID_ASSETS = REPO_ROOT / "android/app/src/main/assets"
 
 
 # --- JSON conversion ----------------------------------------------------------------------------
@@ -208,8 +210,15 @@ def load_configs() -> tuple[dict, dict]:
     return rules, model
 
 
+def write_android_configs(rules_cfg: dict, model_cfg: dict) -> None:
+    ANDROID_ASSETS.mkdir(parents=True, exist_ok=True)
+    (ANDROID_ASSETS / "rules.json").write_text(json.dumps(rules_cfg, indent=1) + "\n")
+    (ANDROID_ASSETS / "model.json").write_text(json.dumps(model_cfg, indent=1) + "\n")
+
+
 def main() -> None:
     rules_cfg, model_cfg = load_configs()
+    write_android_configs(rules_cfg, model_cfg)
     cases_dir, tracker_dir = GOLDEN_DIR / "cases", GOLDEN_DIR / "tracker"
     cases_dir.mkdir(exist_ok=True)
     tracker_dir.mkdir(exist_ok=True)

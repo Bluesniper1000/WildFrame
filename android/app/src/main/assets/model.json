@@ -1,0 +1,18 @@
+{
+ "backend": "onnxruntime",
+ "weights_path": "ap10k_ft/weights_quant/best_int8_kpfp32.onnx",
+ "providers": [
+  "CPUExecutionProvider"
+ ],
+ "input_size": 640,
+ "input_layout": "NCHW",
+ "normalize": "div255",
+ "num_keypoints": 17,
+ "end2end": false,
+ "max_det": 10,
+ "conf_threshold": 0.25,
+ "iou_threshold_nms": 0.5,
+ "kpt_conf_threshold": 0.0,
+ "track_iou_threshold": 0.3,
+ "track_max_age": 30
+}

@@ -10,7 +10,7 @@ from pathlib import Path
 
 import pytest
 
-from golden.generate import GOLDEN_DIR, detection_from_json, load_configs, run_frames, run_tracker
+from golden.generate import ANDROID_ASSETS, GOLDEN_DIR, detection_from_json, load_configs, run_frames, run_tracker
 
 CASES = sorted((GOLDEN_DIR / "cases").glob("*.json"))
 TRACKER_CASES = sorted((GOLDEN_DIR / "tracker").glob("*.json"))
@@ -60,3 +60,10 @@ def test_tracker_case_matches(path: Path):
     assert case["tracker_config"] == {k: model_cfg[k] for k in case["tracker_config"]}, "configs/model.yaml tracking changed"
     actual = run_tracker([f["boxes_xyxy"] for f in case["frames"]], case["tracker_config"])
     assert actual == [f["expected_track_ids"] for f in case["frames"]]
+
+
+def test_android_config_assets_match_yaml():
+    """The Android app reads JSON copies of configs/*.yaml from its assets; they must not drift."""
+    rules_cfg, model_cfg = load_configs()
+    assert json.loads((ANDROID_ASSETS / "rules.json").read_text()) == rules_cfg, "run python -m golden.generate"
+    assert json.loads((ANDROID_ASSETS / "model.json").read_text()) == model_cfg, "run python -m golden.generate"
