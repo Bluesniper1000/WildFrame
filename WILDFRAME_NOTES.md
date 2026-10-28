@@ -259,7 +259,31 @@ Takeaways:
   - **Tests:** 3 new tests in `tests/test_ready.py` (all 3 fail without the fix) and 1 in `tests/test_smoothing.py`. The parity test flagged the 4 affected golden cases before regeneration. Suite: **141 passed, 1 skipped.**
   - **Still open:** on recovery, a stale `centrality` instruction shows for 2 frames (`hysteresis_flip` frames 20–21). That's centrality's own hysteresis, not `ready`.
 
+### Phases 2–3: Android app v0.1 (built 2026-10-28, branch `android-app`)
+
+- **Built in GitHub Actions**, since this PC has no JDK or Android SDK. `.github/workflows/android.yml` runs three things: the Python golden parity test, the Kotlin engine tests, and `assembleDebug`. The APK is uploaded as the `wildframe-debug-apk` artifact. First green run: https://github.com/Bluesniper1000/WildFrame/actions/runs/40733197452 (commit `3c10e14`).
+- **`android/engine`** is a pure-Kotlin port of the decision path plus the tracker and the output decoder. Its arithmetic mirrors numpy float32 behaviour, and it **passed every golden fixture on the first CI run**, for both decision cases and tracker cases.
+- **`android/app`** combines:
+  - CameraX preview and analysis (frames rotated upright, 4:3, keep-latest);
+  - letterbox + ONNX Runtime 1.20 on the CPU with the INT8 kpfp32 model;
+  - tracker → engine;
+  - an overlay with the thirds grid, skeletons, subject box, instruction banner and mode notice.
+- **Configs:** `golden.generate` now also writes the app's `assets/rules.json` and `model.json`, and `tests/test_golden.py` fails if they drift from the YAML.
+- **APK check:** downloaded and inspected. It contains the manifest, 4 dex files, the model (stored uncompressed), both configs, and ORT native libs for arm64-v8a, armeabi-v7a and x86_64. It's debug-signed. **Not yet run on a real phone.**
+- **Two CI fixes:**
+  - `overlay` inside `FrameLayout.apply{}` resolved to `ViewGroup.getOverlay()`;
+  - `density` inside `TextPaint.apply{}` resolved to TextPaint's own field, which would have made the text 18 px.
+- **Known limitations (v0.1):**
+  - hysteresis is counted in frames, so it's slower at phone frame rates;
+  - CPU only (QDQ re-quantization for NNAPI/GPU is Phase 1);
+  - portrait and back camera only;
+  - no correction arrows;
+  - AGPL-3.0 implications of shipping Ultralytics-derived weights beyond testing.
+
 ## 12. Open items
+
+- [ ] **Try the APK on a real phone**: check fps / ms per frame, overlay alignment in portrait, and whether instructions match the scene.
+- [ ] Android: time-based hysteresis (or a capped analysis rate) so coaching timing doesn't depend on phone speed.
 
 - [x] "Click now" lagging a real violation: fixed with asymmetric `ready` hysteresis (§11 Phase 0), and `golden/` regenerated.
 - [ ] Decide whether a stale per-rule instruction may flash during recovery (`hysteresis_flip` frames 20–21, centrality). Options: leave it; give rules asymmetric hysteresis too (fast to clear a violation); or suppress lower-priority violations for a few frames after a higher-priority one clears. Any change needs `golden/` regenerated.
