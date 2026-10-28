@@ -1,6 +1,6 @@
 # weights path, end2end flag, input size
 backend: onnxruntime
-weights_path: ap10k_ft/weights_quant/best_int8.onnx   # relative to repo root
+weights_path: ap10k_ft/weights_quant/best_int8_kpfp32.onnx   # relative to repo root; INT8 with the keypoint branch (cv4) kept fp32 - built by bench/quantize.py, see WILDFRAME_NOTES.md §9-10
 providers: ["CPUExecutionProvider"]
 
 input_size: 640                # square, matches export

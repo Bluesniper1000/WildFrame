@@ -1,0 +1,188 @@
+{
+ "name": "yolo26n_int8_kpfp32",
+ "family": "yolo26n",
+ "precision": "int8",
+ "variant": "kpfp32",
+ "input_res": "640 full-frame",
+ "model": "best_int8_kpfp32.onnx",
+ "kind": "yolo-o2m",
+ "preds_source": "yolo26n_int8_kpfp32.preds.json",
+ "split": "ap10k-test-split1.json",
+ "n_images": 1997,
+ "n_preds": 25607,
+ "protocol": {
+  "evaluator": "pycocotools COCOeval keypoints",
+  "sigmas": "ap10k (MMPose)",
+  "pred_conf": 0.001,
+  "pred_nms_iou": 0.7,
+  "pred_max_det": 300,
+  "class_agnostic": true
+ },
+ "ap": {
+  "AP": 0.5306505553936652,
+  "AP50": 0.8389080204167348,
+  "AP75": 0.5611233667235195,
+  "APm": 0.17809539186147832,
+  "APl": 0.5423105768977915,
+  "AR": 0.6230447987851176,
+  "AR50": 0.8917995444191344,
+  "AR75": 0.6708428246013668,
+  "ARm": 0.3148936170212766,
+  "ARl": 0.6344488188976378
+ },
+ "matching": {
+  "min_score": 0.25,
+  "iou": 0.5,
+  "n_gt": 2634,
+  "n_matched": 2415,
+  "recall": 0.9168564920273349
+ },
+ "pck_alpha": 0.05,
+ "pck": {
+  "left_eye": 0.8922091782283885,
+  "right_eye": 0.8803287108371854,
+  "nose": 0.8258948298718515,
+  "neck": 0.3611898016997167,
+  "root_of_tail": 0.4117193523515806,
+  "left_shoulder": 0.49498117942283565,
+  "left_elbow": 0.510580204778157,
+  "left_front_paw": 0.49515287099179717,
+  "right_shoulder": 0.5037783375314862,
+  "right_elbow": 0.5263157894736842,
+  "right_front_paw": 0.4966984592809978,
+  "left_hip": 0.3707647628267183,
+  "left_knee": 0.442654028436019,
+  "left_back_paw": 0.41453831041257366,
+  "right_hip": 0.3873957367933272,
+  "right_knee": 0.46379468377635197,
+  "right_back_paw": 0.43779232927970063
+ },
+ "pck_counts": {
+  "left_eye": 1874,
+  "right_eye": 1947,
+  "nose": 2263,
+  "neck": 2118,
+  "root_of_tail": 1297,
+  "left_shoulder": 1594,
+  "left_elbow": 1465,
+  "left_front_paw": 1341,
+  "right_shoulder": 1588,
+  "right_elbow": 1482,
+  "right_front_paw": 1363,
+  "left_hip": 1033,
+  "left_knee": 1055,
+  "left_back_paw": 1018,
+  "right_hip": 1079,
+  "right_knee": 1091,
+  "right_back_paw": 1069
+ },
+ "nme": {
+  "left_eye": 0.028759661696287093,
+  "right_eye": 0.029121909026360533,
+  "nose": 0.042074392121775044,
+  "neck": 0.08768526455403568,
+  "root_of_tail": 0.08980080731137903,
+  "left_shoulder": 0.0714801977532127,
+  "left_elbow": 0.0754037029168663,
+  "left_front_paw": 0.08975559009852724,
+  "right_shoulder": 0.07116401648303801,
+  "right_elbow": 0.07394492401278216,
+  "right_front_paw": 0.08769985043851813,
+  "left_hip": 0.087037384722292,
+  "left_knee": 0.08470932250997858,
+  "left_back_paw": 0.09647386582936378,
+  "right_hip": 0.08520711088515576,
+  "right_knee": 0.0841409913785697,
+  "right_back_paw": 0.09261504963291585
+ },
+ "eye_pck": 0.8861554566867312,
+ "eye_nme": 0.028944245719226894,
+ "rule_kpt_pck": 0.6147655703289013,
+ "orientation": {
+  "lr_accuracy": 0.7968992248062016,
+  "three_way_accuracy": 0.8351373855120733,
+  "n_lr": 1290,
+  "n_gt_unknown": 13,
+  "confusion": {
+   "left": {
+    "left": 492,
+    "right": 50,
+    "frontal": 96,
+    "unknown": 1
+   },
+   "right": {
+    "left": 27,
+    "right": 536,
+    "frontal": 88,
+    "unknown": 0
+   },
+   "frontal": {
+    "left": 67,
+    "right": 65,
+    "frontal": 978,
+    "unknown": 2
+   },
+   "unknown": {
+    "left": 2,
+    "right": 1,
+    "frontal": 9,
+    "unknown": 1
+   }
+  }
+ },
+ "visibility_auroc": {
+  "per_keypoint": {
+   "left_eye": 0.941149142759071,
+   "right_eye": 0.9400913744134083,
+   "nose": 0.9032330744005396,
+   "neck": 0.8584539127504189,
+   "root_of_tail": 0.9283777893942675,
+   "left_shoulder": 0.9180193080935359,
+   "left_elbow": 0.9181325669121609,
+   "left_front_paw": 0.8848482260521554,
+   "right_shoulder": 0.9106680545445132,
+   "right_elbow": 0.9223424936320519,
+   "right_front_paw": 0.8958368785027436,
+   "left_hip": 0.9217326068957401,
+   "left_knee": 0.9275348480624477,
+   "left_back_paw": 0.9064129140046099,
+   "right_hip": 0.9233453852258412,
+   "right_knee": 0.9334267461598744,
+   "right_back_paw": 0.9107698102822068
+  },
+  "pooled": 0.9293057015903008,
+  "paws": 0.9018636427178552
+ },
+ "predict_wall_s": 93.2,
+ "debug_limit": null,
+ "time": "2026-10-26T11:05:33",
+ "params_m": 2.926501,
+ "gflops": 7.3159552,
+ "flops_model": "best_fp32.onnx",
+ "latency": {
+  "model_only_ms": {
+   "median": 31.437900001037633,
+   "p90": 35.85380000004079,
+   "mean": 32.16457533303279,
+   "n": 300
+  },
+  "e2e_ms": {
+   "median": 37.58765000020503,
+   "p90": 43.86589999921853,
+   "mean": 38.566566333295974,
+   "n": 300
+  },
+  "e2e_settings": {
+   "conf": 0.25,
+   "iou": 0.5,
+   "max_det": 10
+  }
+ },
+ "hardware": {
+  "cpu": "Intel(R) Core(TM) 7 240H",
+  "threads": 8,
+  "runtime": "onnxruntime 1.31.0 CPUExecutionProvider",
+  "batch": 1,
+  "input": "640x640 letterbox"
+ }
+}

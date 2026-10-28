@@ -12,7 +12,7 @@ import cv2
 import numpy as np
 import yaml
 
-from wildframe.contracts import RuleName, RuleOutput, RuleState, SubjectMode
+from wildframe.contracts import Detection, RuleName, RuleOutput, RuleState, SubjectMode, SubjectSet
 from wildframe.explain import overlay, priority, templates
 from wildframe.explain.priority import PriorityItem
 from wildframe.pose.backend import PoseBackend, REPO_ROOT
@@ -45,6 +45,20 @@ class FrameResult:
     mode_notice: str | None = None
 
 
+@dataclass
+class Decision:
+    """Everything the deterministic detections -> instruction path produces for one frame,
+    before anything is drawn. This is the contract a port of the rule engine (e.g. mobile)
+    must reproduce - see golden/."""
+
+    subject_set: SubjectSet
+    chosen: RuleOutput | None
+    raw_outputs: dict[RuleName, RuleOutput]
+    all_outputs: dict[RuleName, RuleOutput]
+    ready: RuleOutput | None
+    mode_notice: str | None
+
+
 def _resolve(path: str | Path) -> Path:
     path = Path(path)
     return path if path.is_absolute() else REPO_ROOT / path
@@ -55,8 +69,11 @@ class Pipeline:
         self,
         model_config_path: str | Path = "configs/model.yaml",
         rules_config_path: str | Path = "configs/rules.yaml",
+        load_model: bool = True,
     ):
-        self.backend = PoseBackend(model_config_path)
+        # load_model=False builds only the rule/decision side, for driving decide() with
+        # detections directly (golden fixtures, tests) without the ONNX weights present.
+        self.backend = PoseBackend(model_config_path) if load_model else None
         self.rules_config = yaml.safe_load(_resolve(rules_config_path).read_text())
 
         self.rules = {
@@ -76,8 +93,26 @@ class Pipeline:
     def process_frame(self, frame_bgr: np.ndarray) -> FrameResult:
         detections = self.backend.infer(frame_bgr)
         h, w = frame_bgr.shape[:2]
+        decision = self.decide(detections, (w, h))
+        subject_set = decision.subject_set
 
-        subject_set, self._scene_state = resolve_scene(detections, (w, h), self.rules_config, self._scene_state)
+        if subject_set.mode == SubjectMode.NONE or subject_set.primary is None:
+            annotated = overlay.draw_overlay(frame_bgr, None, None, mode_notice=decision.mode_notice)
+        else:
+            display_subject = composite_subject(subject_set) or subject_set.primary
+            annotated = overlay.draw_overlay(
+                frame_bgr, display_subject, decision.chosen, mode_notice=decision.mode_notice, subject_set=subject_set
+            )
+        return FrameResult(
+            annotated_frame=annotated, chosen=decision.chosen, all_outputs=decision.all_outputs,
+            mode_notice=decision.mode_notice,
+        )
+
+    def decide(self, detections: list[Detection], frame_dims: tuple[int, int]) -> Decision:
+        """The deterministic per-frame path: detections -> scene -> rules -> hysteresis ->
+        ready/priority -> rendered instruction. Stateful across calls (scene mode hysteresis,
+        per-rule smoothing), so feed frames in order."""
+        subject_set, self._scene_state = resolve_scene(detections, frame_dims, self.rules_config, self._scene_state)
 
         mode_notice = None
         if subject_set.mode != self._last_emitted_mode:
@@ -85,12 +120,8 @@ class Pipeline:
             self._last_emitted_mode = subject_set.mode
 
         if subject_set.mode == SubjectMode.NONE or subject_set.primary is None:
-            return FrameResult(
-                annotated_frame=overlay.draw_overlay(frame_bgr, None, None, mode_notice=mode_notice),
-                chosen=None,
-                all_outputs={},
-                mode_notice=mode_notice,
-            )
+            return Decision(subject_set=subject_set, chosen=None, raw_outputs={}, all_outputs={},
+                            ready=None, mode_notice=mode_notice)
 
         primary_track_id = subject_set.primary.track_id
 
@@ -118,11 +149,8 @@ class Pipeline:
             if chosen is not None:
                 chosen = templates.render(chosen)
 
-        display_subject = composite_subject(subject_set) or subject_set.primary
-        annotated = overlay.draw_overlay(
-            frame_bgr, display_subject, chosen, mode_notice=mode_notice, subject_set=subject_set
-        )
-        return FrameResult(annotated_frame=annotated, chosen=chosen, all_outputs=smoothed_outputs, mode_notice=mode_notice)
+        return Decision(subject_set=subject_set, chosen=chosen, raw_outputs=raw_outputs, all_outputs=smoothed_outputs,
+                        ready=ready_output, mode_notice=mode_notice)
 
     @staticmethod
     def _attach_referent(subject_set, raw_output: RuleOutput) -> RuleOutput:
@@ -142,9 +170,13 @@ class Pipeline:
         A VIOLATED slot at or below ready.severity_max doesn't block readiness either - it's
         treated as fully resolved for display too, so "click now" and a lingering minor
         correction never show at once. An INDETERMINATE slot (gated out, e.g. eye not visible)
-        also doesn't block it. Goes through the same per-(rule, track_id) hysteresis/caching as
-        the composition rules themselves, keyed on RuleName.READY, so it doesn't flicker on its
-        own."""
+        also doesn't block it.
+
+        Asymmetric hysteresis, keyed on (RuleName.READY, track_id): turning ready ON needs
+        ready.hysteresis_frames agreeing frames, so "click now" doesn't flicker on; turning it
+        OFF is immediate. The inputs are already-smoothed rule states, so a blocking violation
+        here has already survived its own rule's hysteresis - adding READY's on top used to keep
+        "click now" on screen for several frames after, e.g., limb_clip had committed VIOLATED."""
         ready_cfg = self.rules_config.get("ready", {})
         severity_max = float(ready_cfg.get("severity_max", 0.3))
 
@@ -155,6 +187,8 @@ class Pipeline:
             state=RuleState.SATISFIED if all_clear else RuleState.VIOLATED,
             reason="all_clear" if all_clear else "has_blocking_violation",
         )
+        if not all_clear:
+            self.smoother.commit(RuleName.READY, RuleState.VIOLATED, track_id)
         return self._apply_smoothing(RuleName.READY, raw_ready, track_id)
 
     def _apply_smoothing(self, rule_name: RuleName, raw_output: RuleOutput, track_id: int | None) -> RuleOutput:

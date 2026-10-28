@@ -1,9 +1,13 @@
 import numpy as np
+import pytest
 
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+
+# scripts/ is gitignored, so a fresh clone won't have the module - skip rather than error out.
+pytest.importorskip("measure_overlap_keypoints", reason="scripts/measure_overlap_keypoints.py not present (scripts/ is gitignored)")
 
 from measure_overlap_keypoints import (  # noqa: E402
     box_iou,

@@ -1,0 +1,217 @@
+{
+ "format_version": 1,
+ "name": "gap_beyond_max_age",
+ "description": "A box missing for 32 frames (> track_max_age) gets a new id.",
+ "tracker_config": {
+  "track_iou_threshold": 0.3,
+  "track_max_age": 30
+ },
+ "frames": [
+  {
+   "boxes_xyxy": [
+    [
+     140.0,
+     195.0,
+     260.0,
+     285.0
+    ]
+   ],
+   "expected_track_ids": [
+    1
+   ]
+  },
+  {
+   "boxes_xyxy": [
+    [
+     140.0,
+     195.0,
+     260.0,
+     285.0
+    ]
+   ],
+   "expected_track_ids": [
+    1
+   ]
+  },
+  {
+   "boxes_xyxy": [
+    [
+     140.0,
+     195.0,
+     260.0,
+     285.0
+    ]
+   ],
+   "expected_track_ids": [
+    1
+   ]
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [
+    [
+     140.0,
+     195.0,
+     260.0,
+     285.0
+    ]
+   ],
+   "expected_track_ids": [
+    2
+   ]
+  },
+  {
+   "boxes_xyxy": [
+    [
+     140.0,
+     195.0,
+     260.0,
+     285.0
+    ]
+   ],
+   "expected_track_ids": [
+    2
+   ]
+  },
+  {
+   "boxes_xyxy": [
+    [
+     140.0,
+     195.0,
+     260.0,
+     285.0
+    ]
+   ],
+   "expected_track_ids": [
+    2
+   ]
+  }
+ ]
+}

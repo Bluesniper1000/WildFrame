@@ -42,7 +42,7 @@ scene:
 ready:
   enabled: true
   severity_max: 0.3           # UNCALIBRATED - a VIOLATED rule with severity at or below this doesn't block "click now"
-  hysteresis_frames: 5        # UNCALIBRATED - consecutive agreeing frames before the ready/not-ready signal flips
+  hysteresis_frames: 5        # UNCALIBRATED - consecutive all-clear frames before "click now" turns ON; it turns OFF immediately on a blocking violation
 
 odd_count:
   enabled: true

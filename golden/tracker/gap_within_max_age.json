@@ -1,0 +1,153 @@
+{
+ "format_version": 1,
+ "name": "gap_within_max_age",
+ "description": "A box missing for 3 frames comes back with the same id.",
+ "tracker_config": {
+  "track_iou_threshold": 0.3,
+  "track_max_age": 30
+ },
+ "frames": [
+  {
+   "boxes_xyxy": [
+    [
+     140.0,
+     195.0,
+     260.0,
+     285.0
+    ]
+   ],
+   "expected_track_ids": [
+    1
+   ]
+  },
+  {
+   "boxes_xyxy": [
+    [
+     145.0,
+     195.0,
+     265.0,
+     285.0
+    ]
+   ],
+   "expected_track_ids": [
+    1
+   ]
+  },
+  {
+   "boxes_xyxy": [
+    [
+     150.0,
+     195.0,
+     270.0,
+     285.0
+    ]
+   ],
+   "expected_track_ids": [
+    1
+   ]
+  },
+  {
+   "boxes_xyxy": [
+    [
+     155.0,
+     195.0,
+     275.0,
+     285.0
+    ]
+   ],
+   "expected_track_ids": [
+    1
+   ]
+  },
+  {
+   "boxes_xyxy": [
+    [
+     160.0,
+     195.0,
+     280.0,
+     285.0
+    ]
+   ],
+   "expected_track_ids": [
+    1
+   ]
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [],
+   "expected_track_ids": []
+  },
+  {
+   "boxes_xyxy": [
+    [
+     180.0,
+     195.0,
+     300.0,
+     285.0
+    ]
+   ],
+   "expected_track_ids": [
+    1
+   ]
+  },
+  {
+   "boxes_xyxy": [
+    [
+     185.0,
+     195.0,
+     305.0,
+     285.0
+    ]
+   ],
+   "expected_track_ids": [
+    1
+   ]
+  },
+  {
+   "boxes_xyxy": [
+    [
+     190.0,
+     195.0,
+     310.0,
+     285.0
+    ]
+   ],
+   "expected_track_ids": [
+    1
+   ]
+  },
+  {
+   "boxes_xyxy": [
+    [
+     195.0,
+     195.0,
+     315.0,
+     285.0
+    ]
+   ],
+   "expected_track_ids": [
+    1
+   ]
+  },
+  {
+   "boxes_xyxy": [
+    [
+     200.0,
+     195.0,
+     320.0,
+     285.0
+    ]
+   ],
+   "expected_track_ids": [
+    1
+   ]
+  }
+ ]
+}

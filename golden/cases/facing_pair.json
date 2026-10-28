@@ -1,0 +1,6584 @@
+{
+ "format_version": 1,
+ "name": "facing_pair",
+ "description": "Two similar animals facing each other -> FACING_PAIR; odd_count gates out.",
+ "frame_dims": [
+  640,
+  480
+ ],
+ "rules_config": {
+  "priority_order": [
+   "limb_clip",
+   "lead_space",
+   [
+    "eye_thirds",
+    "centrality"
+   ],
+   "odd_count"
+  ],
+  "orientation": {
+   "frontal_yaw_max_deg": 25,
+   "min_axis_conf": 0.3
+  },
+  "lead_space": {
+   "enabled": true,
+   "min_lead_fraction": 0.15,
+   "ideal_lead_fraction": 0.3,
+   "hysteresis_frames": 5
+  },
+  "eye_thirds": {
+   "enabled": true,
+   "kpt_conf_threshold": 0.0,
+   "thirds_tolerance_frac": 0.08,
+   "hysteresis_frames": 5
+  },
+  "centrality": {
+   "enabled": true,
+   "center_tolerance_frac": 0.12,
+   "hysteresis_frames": 5
+  },
+  "limb_clip": {
+   "enabled": true,
+   "edge_margin_frac": 0.003125,
+   "min_kpt_conf": 0.25,
+   "hysteresis_frames": 3
+  },
+  "scene": {
+   "max_det": 10,
+   "min_det_conf": 0.25,
+   "min_bbox_area_frac": 0.0009765625,
+   "dominance_ratio": 2.5,
+   "agreement_fraction": 0.75,
+   "overlap_iou_max": 0.3,
+   "conf_margin": 0.05,
+   "mode_enter_frames": 5
+  },
+  "ready": {
+   "enabled": true,
+   "severity_max": 0.3,
+   "hysteresis_frames": 5
+  },
+  "odd_count": {
+   "enabled": true,
+   "ceiling": {
+    "value": 6,
+    "source": "design choice - pending Excell p.?"
+   },
+   "edge_margin_frac": 0.03125,
+   "exclude_below_visible": 0.5,
+   "hysteresis_frames": 5
+  }
+ },
+ "frames": [
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      137.0,
+      217.8000030517578,
+      248.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       222.8000030517578,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       224.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       230.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       200.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       152.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      405.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       426.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       427.20001220703125,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       420.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       450.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       498.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "facing_pair",
+     "mode_reason": "2 of 2 mutually facing",
+     "count": 2,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      137.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "right",
+       "facing_vector": [
+        0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": "Now tracking: facing pair (2 of 2 mutually facing).",
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "limb_clip",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": "Can't judge limb framing (insufficient_history).",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      137.0,
+      217.8000030517578,
+      248.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       222.8000030517578,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       224.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       230.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       200.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       152.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      405.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       426.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       427.20001220703125,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       420.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       450.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       498.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "facing_pair",
+     "mode_reason": "2 of 2 mutually facing",
+     "count": 2,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      137.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "right",
+       "facing_vector": [
+        0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "limb_clip",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": "Can't judge limb framing (insufficient_history).",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      137.0,
+      217.8000030517578,
+      248.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       222.8000030517578,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       224.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       230.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       200.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       152.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      405.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       426.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       427.20001220703125,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       420.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       450.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       498.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "facing_pair",
+     "mode_reason": "2 of 2 mutually facing",
+     "count": 2,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      137.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "right",
+       "facing_vector": [
+        0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "limb_clip",
+     "state": "satisfied",
+     "reason": "ok",
+     "message": "No limbs clipped.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": "the group",
+     "debug": {
+      "checked": [
+       [
+        0,
+        "left_front"
+       ],
+       [
+        0,
+        "right_front"
+       ],
+       [
+        0,
+        "left_back"
+       ],
+       [
+        0,
+        "right_back"
+       ],
+       [
+        1,
+        "left_front"
+       ],
+       [
+        1,
+        "right_front"
+       ],
+       [
+        1,
+        "left_back"
+       ],
+       [
+        1,
+        "right_back"
+       ]
+      ],
+      "clipped_limb": null
+     }
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      137.0,
+      217.8000030517578,
+      248.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       222.8000030517578,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       224.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       230.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       200.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       152.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      405.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       426.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       427.20001220703125,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       420.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       450.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       498.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "facing_pair",
+     "mode_reason": "2 of 2 mutually facing",
+     "count": 2,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      137.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "right",
+       "facing_vector": [
+        0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "limb_clip",
+     "state": "satisfied",
+     "reason": "ok",
+     "message": "No limbs clipped.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": "the group",
+     "debug": {
+      "checked": [
+       [
+        0,
+        "left_front"
+       ],
+       [
+        0,
+        "right_front"
+       ],
+       [
+        0,
+        "left_back"
+       ],
+       [
+        0,
+        "right_back"
+       ],
+       [
+        1,
+        "left_front"
+       ],
+       [
+        1,
+        "right_front"
+       ],
+       [
+        1,
+        "left_back"
+       ],
+       [
+        1,
+        "right_back"
+       ]
+      ],
+      "clipped_limb": null
+     }
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      137.0,
+      217.8000030517578,
+      248.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       222.8000030517578,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       224.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       230.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       200.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       152.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      405.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       426.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       427.20001220703125,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       420.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       450.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       498.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "facing_pair",
+     "mode_reason": "2 of 2 mutually facing",
+     "count": 2,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      137.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "right",
+       "facing_vector": [
+        0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      137.0,
+      217.8000030517578,
+      248.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       222.8000030517578,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       224.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       230.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       200.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       152.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      405.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       426.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       427.20001220703125,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       420.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       450.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       498.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "facing_pair",
+     "mode_reason": "2 of 2 mutually facing",
+     "count": 2,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      137.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "right",
+       "facing_vector": [
+        0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      137.0,
+      217.8000030517578,
+      248.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       222.8000030517578,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       224.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       230.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       200.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       152.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      405.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       426.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       427.20001220703125,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       420.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       450.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       498.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "facing_pair",
+     "mode_reason": "2 of 2 mutually facing",
+     "count": 2,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      137.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "right",
+       "facing_vector": [
+        0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      137.0,
+      217.8000030517578,
+      248.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       222.8000030517578,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       224.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       230.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       200.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       152.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      405.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       426.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       427.20001220703125,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       420.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       450.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       498.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "facing_pair",
+     "mode_reason": "2 of 2 mutually facing",
+     "count": 2,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      137.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "right",
+       "facing_vector": [
+        0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      137.0,
+      217.8000030517578,
+      248.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       222.8000030517578,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       224.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       230.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       200.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       152.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      405.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       426.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       427.20001220703125,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       420.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       450.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       498.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "facing_pair",
+     "mode_reason": "2 of 2 mutually facing",
+     "count": 2,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      137.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "right",
+       "facing_vector": [
+        0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      137.0,
+      217.8000030517578,
+      248.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       222.8000030517578,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       224.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       230.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       200.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       152.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      405.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       426.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       427.20001220703125,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       420.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       450.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       498.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "facing_pair",
+     "mode_reason": "2 of 2 mutually facing",
+     "count": 2,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      137.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "right",
+       "facing_vector": [
+        0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      137.0,
+      217.8000030517578,
+      248.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       222.8000030517578,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       224.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       230.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       200.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       152.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      405.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       426.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       427.20001220703125,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       420.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       450.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       498.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "facing_pair",
+     "mode_reason": "2 of 2 mutually facing",
+     "count": 2,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      137.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "right",
+       "facing_vector": [
+        0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      137.0,
+      217.8000030517578,
+      248.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       222.8000030517578,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       224.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       230.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       200.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       152.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      405.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       426.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       427.20001220703125,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       420.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       450.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       498.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "facing_pair",
+     "mode_reason": "2 of 2 mutually facing",
+     "count": 2,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      137.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "right",
+       "facing_vector": [
+        0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      137.0,
+      217.8000030517578,
+      248.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       222.8000030517578,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       224.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       230.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       200.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       152.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      405.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       426.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       427.20001220703125,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       420.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       450.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       498.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "facing_pair",
+     "mode_reason": "2 of 2 mutually facing",
+     "count": 2,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      137.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "right",
+       "facing_vector": [
+        0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      137.0,
+      217.8000030517578,
+      248.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       222.8000030517578,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       224.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       230.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       200.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       152.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       188.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       191.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       230.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       233.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      405.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "keypoints": [
+      [
+       426.0,
+       234.0,
+       0.8500000238418579
+      ],
+      [
+       427.20001220703125,
+       232.8000030517578,
+       0.30000001192092896
+      ],
+      [
+       420.0,
+       237.0,
+       0.8999999761581421
+      ],
+      [
+       450.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       498.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       438.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       441.0,
+       277.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       240.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       258.0,
+       0.8999999761581421
+      ],
+      [
+       480.0,
+       276.0,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       241.1999969482422,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       259.20001220703125,
+       0.8999999761581421
+      ],
+      [
+       483.0,
+       277.20001220703125,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "facing_pair",
+     "mode_reason": "2 of 2 mutually facing",
+     "count": 2,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      137.0,
+      217.8000030517578,
+      513.0,
+      292.20001220703125
+     ],
+     "agreed_yaw": null,
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "right",
+       "facing_vector": [
+        0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        325.0,
+        255.0
+       ],
+       "dist_frac": 0.01976423537605237
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.16820026826256873,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "left",
+       "direction_y": "up",
+       "magnitude_px": [
+        -10.666671752929688,
+        -74.0
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "right",
+       "nearest_intersection": [
+        213.33333333333334,
+        160.0
+       ],
+       "dist_frac": 0.0934560214610055
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "no_orientation",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "facing_pair_mode",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  }
+ ]
+}

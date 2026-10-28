@@ -114,3 +114,47 @@ def test_ready_tracked_independently_per_track_id():
 
     assert pipeline._resolve_ready(satisfied, track_id=1).state == RuleState.SATISFIED
     assert result_blocked.state == RuleState.VIOLATED
+
+
+def test_blocking_violation_drops_ready_immediately():
+    """Turning ready OFF must not wait for READY's own hysteresis: the inputs are already-smoothed
+    rule states, so "click now" must disappear on the first frame a blocking violation is committed."""
+    pipeline = _make_pipeline()
+    satisfied = _all_satisfied()
+    for _ in range(5):
+        ready = pipeline._resolve_ready(satisfied, track_id=1)
+    assert ready.state == RuleState.SATISFIED
+
+    blocked = _all_satisfied()
+    blocked[RuleName.LIMB_CLIP] = _output(RuleName.LIMB_CLIP, RuleState.VIOLATED, severity=0.9)
+    result = pipeline._resolve_ready(blocked, track_id=1)
+    assert result.state == RuleState.VIOLATED
+    assert result.reason == "has_blocking_violation"
+
+
+def test_ready_turns_back_on_only_after_hysteresis():
+    """Turning ready ON stays smoothed: after a blocking violation clears, "click now" needs
+    ready.hysteresis_frames (3 here) consecutive all-clear frames."""
+    pipeline = _make_pipeline()
+    blocked = _all_satisfied()
+    blocked[RuleName.LIMB_CLIP] = _output(RuleName.LIMB_CLIP, RuleState.VIOLATED, severity=0.9)
+    pipeline._resolve_ready(blocked, track_id=1)
+
+    satisfied = _all_satisfied()
+    states = [pipeline._resolve_ready(satisfied, track_id=1).state for _ in range(3)]
+    assert states == [RuleState.VIOLATED, RuleState.VIOLATED, RuleState.SATISFIED]
+
+
+def test_one_frame_blocking_violation_interrupts_ready_streak():
+    """A blocking violation resets the pending all-clear count, so ready can't commit on a streak
+    that was interrupted."""
+    pipeline = _make_pipeline()
+    satisfied = _all_satisfied()
+    blocked = _all_satisfied()
+    blocked[RuleName.LIMB_CLIP] = _output(RuleName.LIMB_CLIP, RuleState.VIOLATED, severity=0.9)
+
+    pipeline._resolve_ready(satisfied, track_id=1)
+    pipeline._resolve_ready(satisfied, track_id=1)
+    pipeline._resolve_ready(blocked, track_id=1)
+    states = [pipeline._resolve_ready(satisfied, track_id=1).state for _ in range(3)]
+    assert states == [RuleState.VIOLATED, RuleState.VIOLATED, RuleState.SATISFIED]

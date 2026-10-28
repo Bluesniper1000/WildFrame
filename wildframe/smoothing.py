@@ -57,6 +57,15 @@ class Smoother:
 
         return state.committed_state
 
+    def commit(self, rule: RuleName, state: RuleState, track_id: int | None = None) -> None:
+        """Commit `state` immediately, bypassing hysteresis and clearing any pending flip. For
+        signals that must react at once in one direction (e.g. READY dropping on a blocking
+        violation) while still being smoothed in the other."""
+        entry = self._get_state(rule, track_id)
+        entry.committed_state = state
+        entry.pending_state = None
+        entry.pending_count = 0
+
     def reset(self, rule: RuleName | None = None, track_id: int | None = _UNSET) -> None:
         """reset() clears everything. reset(rule) clears that rule across all tracks (Phase A
         usage). reset(track_id=id) clears every rule for one departed track. reset(rule, track_id)

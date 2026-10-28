@@ -1,0 +1,8622 @@
+{
+ "format_version": 1,
+ "name": "three_aligned",
+ "description": "Three similar animals all facing left -> GROUP_ALIGNED, odd count.",
+ "frame_dims": [
+  640,
+  480
+ ],
+ "rules_config": {
+  "priority_order": [
+   "limb_clip",
+   "lead_space",
+   [
+    "eye_thirds",
+    "centrality"
+   ],
+   "odd_count"
+  ],
+  "orientation": {
+   "frontal_yaw_max_deg": 25,
+   "min_axis_conf": 0.3
+  },
+  "lead_space": {
+   "enabled": true,
+   "min_lead_fraction": 0.15,
+   "ideal_lead_fraction": 0.3,
+   "hysteresis_frames": 5
+  },
+  "eye_thirds": {
+   "enabled": true,
+   "kpt_conf_threshold": 0.0,
+   "thirds_tolerance_frac": 0.08,
+   "hysteresis_frames": 5
+  },
+  "centrality": {
+   "enabled": true,
+   "center_tolerance_frac": 0.12,
+   "hysteresis_frames": 5
+  },
+  "limb_clip": {
+   "enabled": true,
+   "edge_margin_frac": 0.003125,
+   "min_kpt_conf": 0.25,
+   "hysteresis_frames": 3
+  },
+  "scene": {
+   "max_det": 10,
+   "min_det_conf": 0.25,
+   "min_bbox_area_frac": 0.0009765625,
+   "dominance_ratio": 2.5,
+   "agreement_fraction": 0.75,
+   "overlap_iou_max": 0.3,
+   "conf_margin": 0.05,
+   "mode_enter_frames": 5
+  },
+  "ready": {
+   "enabled": true,
+   "severity_max": 0.3,
+   "hysteresis_frames": 5
+  },
+  "odd_count": {
+   "enabled": true,
+   "ceiling": {
+    "value": 6,
+    "source": "design choice - pending Excell p.?"
+   },
+   "edge_margin_frac": 0.03125,
+   "exclude_below_visible": 0.5,
+   "hysteresis_frames": 5
+  }
+ },
+ "frames": [
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      112.5,
+      229.60000610351562,
+      201.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       132.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       132.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       127.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       150.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       186.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      292.5,
+      229.60000610351562,
+      381.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       312.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       312.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       307.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       330.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       366.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      472.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       492.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       492.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       487.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       510.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       546.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "3 of 3 facing left",
+     "count": 3,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      112.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": "Now tracking: group aligned (3 of 3 facing left).",
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "limb_clip",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": "Can't judge limb framing (insufficient_history).",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      112.5,
+      229.60000610351562,
+      201.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       132.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       132.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       127.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       150.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       186.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      292.5,
+      229.60000610351562,
+      381.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       312.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       312.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       307.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       330.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       366.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      472.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       492.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       492.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       487.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       510.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       546.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "3 of 3 facing left",
+     "count": 3,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      112.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "limb_clip",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": "Can't judge limb framing (insufficient_history).",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      112.5,
+      229.60000610351562,
+      201.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       132.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       132.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       127.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       150.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       186.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      292.5,
+      229.60000610351562,
+      381.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       312.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       312.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       307.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       330.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       366.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      472.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       492.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       492.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       487.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       510.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       546.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "3 of 3 facing left",
+     "count": 3,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      112.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "limb_clip",
+     "state": "satisfied",
+     "reason": "ok",
+     "message": "No limbs clipped.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": "the group",
+     "debug": {
+      "checked": [
+       [
+        0,
+        "left_front"
+       ],
+       [
+        0,
+        "right_front"
+       ],
+       [
+        0,
+        "left_back"
+       ],
+       [
+        0,
+        "right_back"
+       ],
+       [
+        1,
+        "left_front"
+       ],
+       [
+        1,
+        "right_front"
+       ],
+       [
+        1,
+        "left_back"
+       ],
+       [
+        1,
+        "right_back"
+       ],
+       [
+        2,
+        "left_front"
+       ],
+       [
+        2,
+        "right_front"
+       ],
+       [
+        2,
+        "left_back"
+       ],
+       [
+        2,
+        "right_back"
+       ]
+      ],
+      "clipped_limb": null
+     }
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      112.5,
+      229.60000610351562,
+      201.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       132.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       132.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       127.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       150.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       186.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      292.5,
+      229.60000610351562,
+      381.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       312.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       312.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       307.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       330.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       366.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      472.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       492.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       492.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       487.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       510.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       546.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "3 of 3 facing left",
+     "count": 3,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      112.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "indeterminate",
+      "reason": "insufficient_history",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": null,
+      "debug": {}
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "indeterminate",
+     "reason": "insufficient_history",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "limb_clip",
+     "state": "satisfied",
+     "reason": "ok",
+     "message": "No limbs clipped.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": "the group",
+     "debug": {
+      "checked": [
+       [
+        0,
+        "left_front"
+       ],
+       [
+        0,
+        "right_front"
+       ],
+       [
+        0,
+        "left_back"
+       ],
+       [
+        0,
+        "right_back"
+       ],
+       [
+        1,
+        "left_front"
+       ],
+       [
+        1,
+        "right_front"
+       ],
+       [
+        1,
+        "left_back"
+       ],
+       [
+        1,
+        "right_back"
+       ],
+       [
+        2,
+        "left_front"
+       ],
+       [
+        2,
+        "right_front"
+       ],
+       [
+        2,
+        "left_back"
+       ],
+       [
+        2,
+        "right_back"
+       ]
+      ],
+      "clipped_limb": null
+     }
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      112.5,
+      229.60000610351562,
+      201.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       132.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       132.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       127.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       150.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       186.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      292.5,
+      229.60000610351562,
+      381.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       312.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       312.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       307.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       330.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       366.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      472.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       492.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       492.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       487.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       510.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       546.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "3 of 3 facing left",
+     "count": 3,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      112.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      112.5,
+      229.60000610351562,
+      201.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       132.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       132.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       127.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       150.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       186.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      292.5,
+      229.60000610351562,
+      381.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       312.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       312.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       307.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       330.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       366.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      472.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       492.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       492.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       487.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       510.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       546.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "3 of 3 facing left",
+     "count": 3,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      112.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      112.5,
+      229.60000610351562,
+      201.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       132.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       132.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       127.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       150.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       186.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      292.5,
+      229.60000610351562,
+      381.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       312.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       312.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       307.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       330.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       366.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      472.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       492.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       492.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       487.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       510.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       546.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "3 of 3 facing left",
+     "count": 3,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      112.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      112.5,
+      229.60000610351562,
+      201.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       132.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       132.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       127.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       150.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       186.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      292.5,
+      229.60000610351562,
+      381.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       312.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       312.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       307.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       330.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       366.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      472.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       492.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       492.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       487.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       510.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       546.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "3 of 3 facing left",
+     "count": 3,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      112.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      112.5,
+      229.60000610351562,
+      201.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       132.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       132.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       127.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       150.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       186.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      292.5,
+      229.60000610351562,
+      381.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       312.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       312.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       307.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       330.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       366.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      472.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       492.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       492.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       487.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       510.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       546.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "3 of 3 facing left",
+     "count": 3,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      112.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      112.5,
+      229.60000610351562,
+      201.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       132.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       132.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       127.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       150.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       186.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      292.5,
+      229.60000610351562,
+      381.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       312.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       312.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       307.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       330.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       366.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      472.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       492.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       492.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       487.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       510.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       546.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "3 of 3 facing left",
+     "count": 3,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      112.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      112.5,
+      229.60000610351562,
+      201.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       132.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       132.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       127.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       150.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       186.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      292.5,
+      229.60000610351562,
+      381.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       312.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       312.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       307.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       330.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       366.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      472.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       492.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       492.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       487.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       510.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       546.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "3 of 3 facing left",
+     "count": 3,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      112.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      112.5,
+      229.60000610351562,
+      201.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       132.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       132.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       127.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       150.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       186.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      292.5,
+      229.60000610351562,
+      381.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       312.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       312.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       307.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       330.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       366.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      472.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       492.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       492.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       487.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       510.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       546.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "3 of 3 facing left",
+     "count": 3,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      112.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      112.5,
+      229.60000610351562,
+      201.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       132.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       132.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       127.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       150.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       186.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      292.5,
+      229.60000610351562,
+      381.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       312.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       312.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       307.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       330.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       366.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      472.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       492.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       492.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       487.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       510.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       546.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "3 of 3 facing left",
+     "count": 3,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      112.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  },
+  {
+   "detections": [
+    {
+     "bbox_xyxy": [
+      112.5,
+      229.60000610351562,
+      201.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       132.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       132.89999389648438,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       127.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       150.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       186.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       141.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       143.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       172.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       174.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 1
+    },
+    {
+     "bbox_xyxy": [
+      292.5,
+      229.60000610351562,
+      381.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       312.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       312.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       307.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       330.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       366.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       321.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       323.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       352.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       354.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 2
+    },
+    {
+     "bbox_xyxy": [
+      472.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "keypoints": [
+      [
+       492.0,
+       245.5,
+       0.8500000238418579
+      ],
+      [
+       492.8999938964844,
+       244.60000610351562,
+       0.30000001192092896
+      ],
+      [
+       487.5,
+       247.75,
+       0.8999999761581421
+      ],
+      [
+       510.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       546.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       501.0,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       503.25,
+       277.8999938964844,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       250.0,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       263.5,
+       0.8999999761581421
+      ],
+      [
+       532.5,
+       277.0,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       250.89999389648438,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       264.3999938964844,
+       0.8999999761581421
+      ],
+      [
+       534.75,
+       277.8999938964844,
+       0.8999999761581421
+      ]
+     ],
+     "det_conf": 0.9,
+     "track_id": 3
+    }
+   ],
+   "expected": {
+    "scene": {
+     "mode": "group_aligned",
+     "mode_reason": "3 of 3 facing left",
+     "count": 3,
+     "count_reliable": true,
+     "primary_track_id": 1,
+     "union_bbox": [
+      112.5,
+      229.60000610351562,
+      561.0,
+      292.8999938964844
+     ],
+     "agreed_yaw": "left",
+     "members": [
+      {
+       "track_id": 1,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 2,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      },
+      {
+       "track_id": 3,
+       "yaw_state": "left",
+       "facing_vector": [
+        -0.9950371384620667,
+        -0.09950371831655502
+       ]
+      }
+     ]
+    },
+    "mode_notice": null,
+    "raw": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "smoothed": {
+     "centrality": {
+      "rule": "centrality",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "subject_center": [
+        336.75,
+        261.25
+       ],
+       "dist_frac": 0.03382226060599735
+      }
+     },
+     "eye_thirds": {
+      "rule": "eye_thirds",
+      "state": "violated",
+      "reason": "eye_off_thirds",
+      "message": null,
+      "severity": 0.7233858137468374,
+      "correction": {
+       "axis": "pan_or_tilt",
+       "direction_x": "right",
+       "direction_y": "down",
+       "magnitude_px": [
+        81.33332824707031,
+        74.5
+       ]
+      },
+      "referent": "the group",
+      "debug": {
+       "eye_used": "left",
+       "nearest_intersection": [
+        213.33333333333334,
+        320.0
+       ],
+       "dist_frac": 0.137870865099747
+      }
+     },
+     "lead_space": {
+      "rule": "lead_space",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "lead_fraction": 0.17578125,
+       "front_side": "left"
+      }
+     },
+     "limb_clip": {
+      "rule": "limb_clip",
+      "state": "satisfied",
+      "reason": "ok",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "checked": [
+        [
+         0,
+         "left_front"
+        ],
+        [
+         0,
+         "right_front"
+        ],
+        [
+         0,
+         "left_back"
+        ],
+        [
+         0,
+         "right_back"
+        ],
+        [
+         1,
+         "left_front"
+        ],
+        [
+         1,
+         "right_front"
+        ],
+        [
+         1,
+         "left_back"
+        ],
+        [
+         1,
+         "right_back"
+        ],
+        [
+         2,
+         "left_front"
+        ],
+        [
+         2,
+         "right_front"
+        ],
+        [
+         2,
+         "left_back"
+        ],
+        [
+         2,
+         "right_back"
+        ]
+       ],
+       "clipped_limb": null
+      }
+     },
+     "odd_count": {
+      "rule": "odd_count",
+      "state": "satisfied",
+      "reason": "odd_count",
+      "message": null,
+      "severity": 0.0,
+      "correction": null,
+      "referent": "the group",
+      "debug": {
+       "count": 3
+      }
+     }
+    },
+    "ready": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": null,
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    },
+    "chosen": {
+     "rule": "ready",
+     "state": "satisfied",
+     "reason": "all_clear",
+     "message": "Good composition - click now.",
+     "severity": 0.0,
+     "correction": null,
+     "referent": null,
+     "debug": {}
+    }
+   }
+  }
+ ]
+}

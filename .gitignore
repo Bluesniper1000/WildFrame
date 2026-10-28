@@ -11,3 +11,4 @@ playground/
 plans/
 paper/
 scripts/
+results/bench/*.preds.json
