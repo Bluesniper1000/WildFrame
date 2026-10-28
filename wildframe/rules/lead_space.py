@@ -45,8 +45,9 @@ class LeadSpaceRule(Rule):
 
         if lead_fraction < min_lead_fraction:
             severity = max(0.0, min(1.0, (min_lead_fraction - lead_fraction) / min_lead_fraction))
-            # Pan the camera away from the front side to open up space ahead of the subject.
-            direction = "right" if front_side == "left" else "left"
+            # Camera pan direction: turning the camera toward the side the subject faces shifts
+            # the subject the other way in the frame, opening up space ahead of it.
+            direction = front_side
             correction = {
                 "axis": "pan",
                 "direction": direction,

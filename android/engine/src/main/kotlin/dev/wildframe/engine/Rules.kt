@@ -41,7 +41,7 @@ class LeadSpaceRule(config: Config) : Rule(RuleName.LEAD_SPACE, config) {
             val correction = mapOf(
                 "axis" to "pan",
                 // Pan away from the front side to open space ahead of the subject.
-                "direction" to if (frontSide == "left") "right" else "left",
+                "direction" to frontSide,  // camera pan direction, see lead_space.py
                 "magnitude_frac" to pyMax(0.0f, idealLead - leadFraction).toDouble(),
             )
             return RuleOutput(name, RuleState.VIOLATED, "insufficient_lead_space", severity = severity.toDouble(),

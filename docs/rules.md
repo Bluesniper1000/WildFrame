@@ -14,7 +14,7 @@ Rules consume the composite `SubjectSet` built by `scene.py`, not raw detections
 Checks whether there's enough empty space in front of a moving/facing subject ("lead space" / "nose room").
 
 - **Gate:** no subject → `no_subject`; no orientation or no facing vector → `no_orientation`; subject facing the camera → `frontal_yaw` (lead space is only meaningful for a subject facing left/right).
-- **Evaluate:** measures the empty fraction of frame width on the side the subject is facing. Violates if that fraction is below `min_lead_fraction`; severity scales toward 0 as the fraction approaches `min_lead_fraction`. Correction is a pan away from the front side toward `ideal_lead_fraction`.
+- **Evaluate:** measures the empty fraction of frame width on the side the subject is facing. Violates if that fraction is below `min_lead_fraction`; severity scales toward 0 as the fraction approaches `min_lead_fraction`. Correction is a camera pan toward the front side (turning the camera the way the subject faces moves the subject the other way in the frame), sized toward `ideal_lead_fraction`. `direction` is the camera movement, which is what the "Pan {direction}" message tells the photographer.
 - **Config:** `min_lead_fraction` (0.15), `ideal_lead_fraction` (0.30), `hysteresis_frames` (5).
 
 ## `eye_thirds` (`wildframe/rules/eye_thirds.py`)

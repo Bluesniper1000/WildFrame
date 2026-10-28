@@ -285,6 +285,7 @@ Takeaways:
 - [ ] **Try the APK on a real phone**: check fps / ms per frame, overlay alignment in portrait, and whether instructions match the scene.
 - [ ] Android: time-based hysteresis (or a capped analysis rate) so coaching timing doesn't depend on phone speed.
 
+- [x] **Lead-space pan direction was reversed (fixed 2026-10-29).** The rule reported the direction the *subject* should move in the frame, but the message says "Pan {direction}", which a photographer reads as a camera movement, so every lead-space instruction pointed the wrong way. `lead_space` now reports the camera pan direction (toward the side the subject faces) in `wildframe/rules/lead_space.py` and the Kotlin `Rules.kt`. `test_rules.py` asserts the camera direction. Regenerating `golden/` changed only `direction` and `message` in `single_right_no_lead_space` and `four_with_edge_member`. eye_thirds/centrality still describe `direction_x/y` as subject movement, but no message uses those fields.
 - [x] "Click now" lagging a real violation: fixed with asymmetric `ready` hysteresis (§11 Phase 0), and `golden/` regenerated.
 - [ ] Decide whether a stale per-rule instruction may flash during recovery (`hysteresis_flip` frames 20–21, centrality). Options: leave it; give rules asymmetric hysteresis too (fast to clear a violation); or suppress lower-priority violations for a few frames after a higher-priority one clears. Any change needs `golden/` regenerated.
 - [ ] Mobile Phase 1: QDQ re-quantization, input-size sweep, on-device latency.

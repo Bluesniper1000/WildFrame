@@ -39,7 +39,9 @@ def test_lead_space_violated_flush_against_edge():
     subject = make_subject(bbox=(0, 100, 0.3 * FRAME_W, 300), orientation=_orientation("left"))
     out = rule.run(make_subject_set_single(subject))
     assert out.state == RuleState.VIOLATED
-    assert out.correction["direction"] == "right"
+    # Facing left, flush against the left edge: the camera must pan left (toward the gaze) so the
+    # subject moves right in the frame and gains room ahead of it.
+    assert out.correction["direction"] == "left"
 
 
 def test_lead_space_indeterminate_frontal():

@@ -254,7 +254,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -562,7 +562,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -870,7 +870,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -1218,7 +1218,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -1566,7 +1566,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -1674,7 +1674,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -1738,11 +1738,11 @@
      "rule": "lead_space",
      "state": "violated",
      "reason": "insufficient_lead_space",
-     "message": "Pan left - give the animal more room to look/move into.",
+     "message": "Pan right - give the animal more room to look/move into.",
      "severity": 0.8958333134651184,
      "correction": {
       "axis": "pan",
-      "direction": "left",
+      "direction": "right",
       "magnitude_frac": 0.28437501192092896
      },
      "referent": "the animal",
@@ -1937,7 +1937,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -2045,7 +2045,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -2109,11 +2109,11 @@
      "rule": "lead_space",
      "state": "violated",
      "reason": "insufficient_lead_space",
-     "message": "Pan left - give the animal more room to look/move into.",
+     "message": "Pan right - give the animal more room to look/move into.",
      "severity": 0.8958333134651184,
      "correction": {
       "axis": "pan",
-      "direction": "left",
+      "direction": "right",
       "magnitude_frac": 0.28437501192092896
      },
      "referent": "the animal",
@@ -2308,7 +2308,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -2416,7 +2416,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -2480,11 +2480,11 @@
      "rule": "lead_space",
      "state": "violated",
      "reason": "insufficient_lead_space",
-     "message": "Pan left - give the animal more room to look/move into.",
+     "message": "Pan right - give the animal more room to look/move into.",
      "severity": 0.8958333134651184,
      "correction": {
       "axis": "pan",
-      "direction": "left",
+      "direction": "right",
       "magnitude_frac": 0.28437501192092896
      },
      "referent": "the animal",
@@ -2679,7 +2679,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -2787,7 +2787,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -2851,11 +2851,11 @@
      "rule": "lead_space",
      "state": "violated",
      "reason": "insufficient_lead_space",
-     "message": "Pan left - give the animal more room to look/move into.",
+     "message": "Pan right - give the animal more room to look/move into.",
      "severity": 0.8958333134651184,
      "correction": {
       "axis": "pan",
-      "direction": "left",
+      "direction": "right",
       "magnitude_frac": 0.28437501192092896
      },
      "referent": "the animal",
@@ -3050,7 +3050,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -3158,7 +3158,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -3222,11 +3222,11 @@
      "rule": "lead_space",
      "state": "violated",
      "reason": "insufficient_lead_space",
-     "message": "Pan left - give the animal more room to look/move into.",
+     "message": "Pan right - give the animal more room to look/move into.",
      "severity": 0.8958333134651184,
      "correction": {
       "axis": "pan",
-      "direction": "left",
+      "direction": "right",
       "magnitude_frac": 0.28437501192092896
      },
      "referent": "the animal",
@@ -3421,7 +3421,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -3529,7 +3529,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -3593,11 +3593,11 @@
      "rule": "lead_space",
      "state": "violated",
      "reason": "insufficient_lead_space",
-     "message": "Pan left - give the animal more room to look/move into.",
+     "message": "Pan right - give the animal more room to look/move into.",
      "severity": 0.8958333134651184,
      "correction": {
       "axis": "pan",
-      "direction": "left",
+      "direction": "right",
       "magnitude_frac": 0.28437501192092896
      },
      "referent": "the animal",
@@ -3792,7 +3792,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -3900,7 +3900,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -3964,11 +3964,11 @@
      "rule": "lead_space",
      "state": "violated",
      "reason": "insufficient_lead_space",
-     "message": "Pan left - give the animal more room to look/move into.",
+     "message": "Pan right - give the animal more room to look/move into.",
      "severity": 0.8958333134651184,
      "correction": {
       "axis": "pan",
-      "direction": "left",
+      "direction": "right",
       "magnitude_frac": 0.28437501192092896
      },
      "referent": "the animal",
@@ -4163,7 +4163,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -4271,7 +4271,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -4335,11 +4335,11 @@
      "rule": "lead_space",
      "state": "violated",
      "reason": "insufficient_lead_space",
-     "message": "Pan left - give the animal more room to look/move into.",
+     "message": "Pan right - give the animal more room to look/move into.",
      "severity": 0.8958333134651184,
      "correction": {
       "axis": "pan",
-      "direction": "left",
+      "direction": "right",
       "magnitude_frac": 0.28437501192092896
      },
      "referent": "the animal",
@@ -4534,7 +4534,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -4642,7 +4642,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -4706,11 +4706,11 @@
      "rule": "lead_space",
      "state": "violated",
      "reason": "insufficient_lead_space",
-     "message": "Pan left - give the animal more room to look/move into.",
+     "message": "Pan right - give the animal more room to look/move into.",
      "severity": 0.8958333134651184,
      "correction": {
       "axis": "pan",
-      "direction": "left",
+      "direction": "right",
       "magnitude_frac": 0.28437501192092896
      },
      "referent": "the animal",
@@ -4905,7 +4905,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -5013,7 +5013,7 @@
       "severity": 0.8958333134651184,
       "correction": {
        "axis": "pan",
-       "direction": "left",
+       "direction": "right",
        "magnitude_frac": 0.28437501192092896
       },
       "referent": "the animal",
@@ -5077,11 +5077,11 @@
      "rule": "lead_space",
      "state": "violated",
      "reason": "insufficient_lead_space",
-     "message": "Pan left - give the animal more room to look/move into.",
+     "message": "Pan right - give the animal more room to look/move into.",
      "severity": 0.8958333134651184,
      "correction": {
       "axis": "pan",
-      "direction": "left",
+      "direction": "right",
       "magnitude_frac": 0.28437501192092896
      },
      "referent": "the animal",
